@@ -1,0 +1,248 @@
+{
+  "Navbar": {
+    "inicio": "Inicio",
+    "about": "Sobre Mí",
+    "skills": "Skills",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "testimonials": "Testimonios",
+    "contact": "Contacto",
+    "cta": "Hablemos",
+    "langSwitch": "EN"
+  },
+  "Hero": {
+    "badge": "Disponible para trabajar",
+    "greeting": "Hola, soy",
+    "roles": ["Desarrollador Web", "Estudiante de Ingeniería de Software", "Apasionado por la tecnología"],
+    "descriptionPre": "Estudiante de la",
+    "university": "Universidad Cooperativa de Colombia",
+    "descriptionPost": ", creando experiencias digitales excepcionales con código limpio y diseño moderno.",
+    "cta": "Contáctame",
+    "cvDownload": "Descargar CV",
+    "followLabel": "Sígueme:"
+  },
+  "About": {
+    "badge": "Sobre Mí",
+    "heading": "Conoce un poco",
+    "headingHighlight": "mas sobre mí",
+    "sub": "Un vistazo a quien soy, que me motiva y hacia donde me dirijo",
+    "quote": "El código es poesía que las maquinas pueden entender y los humanos pueden apreciar.",
+    "p1Pre": "Soy",
+    "p1Name": "Andres Chacua",
+    "p1Mid": ", un desarrollador web apasionado y estudiante de la",
+    "p1Uni": "Universidad Cooperativa de Colombia",
+    "p1Post": ". Me especializo en crear interfaces de usuario atractivas y funcionales utilizando tecnologías modernas.",
+    "p2": "Mi viaje en el mundo de la programación comenzó con la curiosidad de entender como funcionan las cosas. Desde entonces, he estado constantemente aprendiendo y mejorando mis habilidades.",
+    "p3": "Cuando no estoy codificando, me gusta explorar nuevas tecnologías y compartir conocimientos con otros desarrolladores.",
+    "stats": {
+      "projects": "Proyectos",
+      "years": "Años Estudiando",
+      "technologies": "Tecnologías",
+      "dedication": "Dedicación"
+    },
+    "highlights": [
+      {
+        "title": "Estudiante Universitario",
+        "description": "Cursando mi carrera en la Universidad Cooperativa de Colombia"
+      },
+      {
+        "title": "Desarrollador en Formación",
+        "description": "Construyendo proyectos reales mientras aprendo nuevas tecnologías"
+      },
+      {
+        "title": "Aprendizaje Continuo",
+        "description": "Siempre buscando nuevos desafíos y oportunidades de crecimiento"
+      },
+      {
+        "title": "Pasión por la Tecnología",
+        "description": "Comprometido con crear soluciones que impacten positivamente"
+      }
+    ]
+  },
+  "Skills": {
+    "badge": "Habilidades",
+    "heading": "Mi Stack",
+    "headingHighlight": "Tecnológico",
+    "sub": "Las tecnologías que domino y utilizo para crear soluciones digitales",
+    "categories": {
+      "all": "Todos",
+      "frontend": "Frontend",
+      "backend": "Backend"
+    },
+    "mastery": "Dominio",
+    "currentlyLearning": "Actualmente aprendiendo",
+    "descriptions": {
+      "Java": "Desarrollo de aplicaciones robustas y escalables",
+      "Python": "Scripting, automatización y análisis de datos",
+      "HTML5": "Estructura semántica y accesible para la web",
+      "CSS3": "Estilos modernos y responsive design",
+      "Tailwind CSS": "Framework utility-first para interfaces modernas"
+    }
+  },
+  "Projects": {
+    "badge": "Proyectos",
+    "heading": "Mis Trabajos",
+    "headingHighlight": "Destacados",
+    "sub": "Cada proyecto representa un desafío superado y nuevos conocimientos adquiridos",
+    "codeButton": "Codigo",
+    "demoButton": "Demo",
+    "viewAll": "Ver todos mis proyectos",
+    "descriptions": {
+      "FinTrack Pro": "Sistema de gestión financiera personal con gráficos interactivos, seguimiento de gastos y predicciones con IA.",
+      "DevConnect Hub": "Red social para desarrolladores con chat en tiempo real, compartir proyectos y sistema de mentoria.",
+      "EcoMarket Place": "Marketplace de productos ecologicos con sistema de puntos verdes y calculadora de huella de carbono.",
+      "TaskFlow AI": "Gestor de tareas inteligente con priorizacion automatica, recordatorios y analisis de productividad."
+    }
+  },
+  "Experience": {
+    "badge": "Trayectoria",
+    "heading": "Mi Experiencia",
+    "sub": "Un recorrido por mi formación academica y experiencia profesional",
+    "tabs": {
+      "education": "Educación",
+      "work": "Experiencia"
+    },
+    "currentBadge": "Actual",
+    "ctaText": "¿Te gustaría saber más sobre mi experiencia?",
+    "ctaButton": "Contáctame",
+    "education": [
+      {
+        "title": "Ingenieria de Software",
+        "organization": "Universidad Cooperativa de Colombia",
+        "location": "Colombia",
+        "period": "2026 - Presente",
+        "description": "Cursando la carrera de Ingenieria de Software con enfasis en desarrollo de software y tecnologias de la información.",
+        "achievements": [
+          "Promedio académico destacado",
+          "Participación en grupos de estudio de programación",
+          "Proyectos académicos sobresalientes"
+        ]
+      },
+      {
+        "title": "Variables y Estructuras de Control en la POO: Java",
+        "organization": "SENA",
+        "location": "Colombia",
+        "period": "Abril 2026",
+        "description": "Curso de programación orientada a objetos con enfoque en Java, estructuras de control y fundamentos de la POO.",
+        "achievements": [
+          "Manejo de variables y tipos de datos en Java",
+          "Implementación de estructuras de control",
+          "Fundamentos de programación orientada a objetos"
+        ]
+      },
+      {
+        "title": "Seminarios Nacionales de Ingeniería de Software",
+        "organization": "Universidad Cooperativa de Colombia",
+        "location": "Colombia",
+        "period": "2024 - 2025",
+        "description": "Asistencia a los tres primeros seminarios nacionales de la carrera, con enfoque en tendencias y avances del sector.",
+        "achievements": [
+          "I Seminario Nacional de Ingeniería de Software — Noviembre 2024",
+          "II Seminario Nacional de Ingeniería de Software — Mayo 2025",
+          "III Seminario Nacional de Ingeniería de Software — Octubre 2025"
+        ]
+      },
+      {
+        "title": "Bachiller Académico",
+        "organization": "Institución Educativa",
+        "location": "Colombia",
+        "period": "2016 - 2022",
+        "description": "Formación académica con énfasis en ciencias exactas y tecnología.",
+        "achievements": [
+          "Graduado con honores",
+          "Interes temprano en programación"
+        ]
+      }
+    ],
+    "work": [
+      {
+        "title": "Desarrollador Web Junior",
+        "organization": "Proyecto Universitario",
+        "location": "Colombia",
+        "period": "2024 - Presente",
+        "description": "Desarrollo de aplicaciones web como parte de proyectos académicos y personales, aplicando conocimientos de programación y diseño.",
+        "achievements": [
+          "Desarrollo de interfaces responsivas",
+          "Implementación de lógica de negocio",
+          "Trabajo en equipo con metodologías ágiles"
+        ]
+      }
+    ]
+  },
+  "Testimonials": {
+    "badge": "Testimonios",
+    "heading": "Lo Que Dicen De Mí",
+    "sub": "Opiniones de profesores, compañeros y mentores que han trabajado conmigo",
+    "items": [
+      {
+        "name": "Maria Garcia",
+        "role": "Profesora de Programacion",
+        "company": "Universidad Cooperativa de Colombia",
+        "content": "Andres es un estudiante excepcional con una capacidad impresionante para resolver problemas. Su dedicacion y pasion por la programacion son evidentes en cada proyecto que entrega.",
+        "avatar": "MG"
+      },
+      {
+        "name": "Carlos Rodriguez",
+        "role": "Companero de Proyecto",
+        "company": "Universidad Cooperativa de Colombia",
+        "content": "Trabajar con Andres fue una experiencia increible. Su habilidad para comunicar ideas tecnicas y su disposicion para ayudar al equipo hicieron que nuestro proyecto fuera un exito.",
+        "avatar": "CR"
+      },
+      {
+        "name": "Laura Martinez",
+        "role": "Mentora Tech",
+        "company": "Comunidad Dev Colombia",
+        "content": "He visto el crecimiento de Andres como desarrollador y puedo decir que tiene un futuro brillante. Su curiosidad y ganas de aprender son admirables.",
+        "avatar": "LM"
+      },
+      {
+        "name": "Juan Pablo Hernandez",
+        "role": "Lider de Proyecto",
+        "company": "Hackathon UCC 2024",
+        "content": "Durante el hackathon, Andres demostro liderazgo tecnico y creatividad. Su capacidad para trabajar bajo presion y entregar resultados de calidad es impresionante.",
+        "avatar": "JH"
+      }
+    ]
+  },
+  "Contact": {
+    "badge": "Contacto",
+    "heading": "Hablemos de tu",
+    "headingHighlight": "Proyecto",
+    "sub": "¿Tienes una idea en mente? Me encantaria escucharla",
+    "phoneLabel": "Teléfono",
+    "locationLabel": "Ubicación",
+    "connectTitle": "Conecta conmigo",
+    "availabilityTitle": "Disponible para proyectos",
+    "availabilityDesc": "Buscando oportunidades de trabajo y proyectos freelance. ¡Contactame!",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "emailLabel": "Email",
+    "subjectLabel": "Asunto",
+    "subjectPlaceholder": "¿De que quieres hablar?",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "Cuentame mas sobre tu proyecto...",
+    "submitButton": "Enviar Mensaje",
+    "submitting": "Enviando...",
+    "successTitle": "¡Mensaje Enviado!",
+    "successDesc": "Gracias por contactarme. Te respondere pronto."
+  },
+  "Footer": {
+    "navTitle": "Navegación",
+    "moreTitle": "Más",
+    "roleLabel": "Desarrollador Web",
+    "copyright": "Hecho con",
+    "copyrightPost": "en Colombia",
+    "backToTop": "Volver arriba",
+    "nav": {
+      "inicio": "Inicio",
+      "about": "Sobre Mi",
+      "skills": "Skills",
+      "projects": "Proyectos"
+    },
+    "more": {
+      "experience": "Experiencia",
+      "testimonials": "Testimonios",
+      "contact": "Contacto"
+    }
+  }
+}

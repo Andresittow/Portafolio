@@ -1,0 +1,248 @@
+{
+  "Navbar": {
+    "inicio": "Home",
+    "about": "About Me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "cta": "Let's Talk",
+    "langSwitch": "ES"
+  },
+  "Hero": {
+    "badge": "Available for work",
+    "greeting": "Hi, I'm",
+    "roles": ["Web Developer", "Software Engineering Student", "Passionate about technology"],
+    "descriptionPre": "Student at",
+    "university": "Universidad Cooperativa de Colombia",
+    "descriptionPost": ", creating exceptional digital experiences with clean code and modern design.",
+    "cta": "Contact Me",
+    "cvDownload": "Download CV",
+    "followLabel": "Follow me:"
+  },
+  "About": {
+    "badge": "About Me",
+    "heading": "Get to know",
+    "headingHighlight": "a bit more about me",
+    "sub": "A glimpse into who I am, what motivates me and where I'm heading",
+    "quote": "Code is poetry that machines can understand and humans can appreciate.",
+    "p1Pre": "I'm",
+    "p1Name": "Andres Chacua",
+    "p1Mid": ", a passionate web developer and student at",
+    "p1Uni": "Universidad Cooperativa de Colombia",
+    "p1Post": ". I specialize in creating attractive and functional user interfaces using modern technologies.",
+    "p2": "My journey into programming began with the curiosity of understanding how things work. Since then, I've been constantly learning and improving my skills.",
+    "p3": "When I'm not coding, I enjoy exploring new technologies and sharing knowledge with other developers.",
+    "stats": {
+      "projects": "Projects",
+      "years": "Years Studying",
+      "technologies": "Technologies",
+      "dedication": "Dedication"
+    },
+    "highlights": [
+      {
+        "title": "University Student",
+        "description": "Pursuing my degree at Universidad Cooperativa de Colombia"
+      },
+      {
+        "title": "Developer in Training",
+        "description": "Building real projects while learning new technologies"
+      },
+      {
+        "title": "Continuous Learning",
+        "description": "Always seeking new challenges and growth opportunities"
+      },
+      {
+        "title": "Passion for Technology",
+        "description": "Committed to creating solutions that make a positive impact"
+      }
+    ]
+  },
+  "Skills": {
+    "badge": "Skills",
+    "heading": "My Tech",
+    "headingHighlight": "Stack",
+    "sub": "The technologies I master and use to create digital solutions",
+    "categories": {
+      "all": "All",
+      "frontend": "Frontend",
+      "backend": "Backend"
+    },
+    "mastery": "Mastery",
+    "currentlyLearning": "Currently learning",
+    "descriptions": {
+      "Java": "Robust and scalable application development",
+      "Python": "Scripting, automation and data analysis",
+      "HTML5": "Semantic and accessible web structure",
+      "CSS3": "Modern styles and responsive design",
+      "Tailwind CSS": "Utility-first framework for modern interfaces"
+    }
+  },
+  "Projects": {
+    "badge": "Projects",
+    "heading": "My Featured",
+    "headingHighlight": "Work",
+    "sub": "Each project represents a challenge overcome and new knowledge gained",
+    "codeButton": "Code",
+    "demoButton": "Demo",
+    "viewAll": "View all my projects",
+    "descriptions": {
+      "FinTrack Pro": "Personal financial management system with interactive charts, expense tracking and AI predictions.",
+      "DevConnect Hub": "Social network for developers with real-time chat, project sharing and mentoring system.",
+      "EcoMarket Place": "Eco-friendly products marketplace with green points system and carbon footprint calculator.",
+      "TaskFlow AI": "Smart task manager with automatic prioritization, reminders and productivity analysis."
+    }
+  },
+  "Experience": {
+    "badge": "Journey",
+    "heading": "My Experience",
+    "sub": "A walkthrough of my academic background and professional experience",
+    "tabs": {
+      "education": "Education",
+      "work": "Experience"
+    },
+    "currentBadge": "Current",
+    "ctaText": "Would you like to know more about my experience?",
+    "ctaButton": "Contact Me",
+    "education": [
+      {
+        "title": "Software Engineering",
+        "organization": "Universidad Cooperativa de Colombia",
+        "location": "Colombia",
+        "period": "2026 - Present",
+        "description": "Studying Software Engineering with a focus on software development and information technologies.",
+        "achievements": [
+          "Outstanding academic average",
+          "Participation in programming study groups",
+          "Outstanding academic projects"
+        ]
+      },
+      {
+        "title": "Variables and Control Structures in OOP: Java",
+        "organization": "SENA",
+        "location": "Colombia",
+        "period": "April 2026",
+        "description": "Object-oriented programming course with a focus on Java, control structures and OOP fundamentals.",
+        "achievements": [
+          "Managing variables and data types in Java",
+          "Implementing control structures",
+          "Fundamentals of object-oriented programming"
+        ]
+      },
+      {
+        "title": "National Software Engineering Seminars",
+        "organization": "Universidad Cooperativa de Colombia",
+        "location": "Colombia",
+        "period": "2024 - 2025",
+        "description": "Attendance at the first three national seminars of the degree, focusing on trends and advances in the sector.",
+        "achievements": [
+          "I National Software Engineering Seminar — November 2024",
+          "II National Software Engineering Seminar — May 2025",
+          "III National Software Engineering Seminar — October 2025"
+        ]
+      },
+      {
+        "title": "High School Diploma",
+        "organization": "Educational Institution",
+        "location": "Colombia",
+        "period": "2016 - 2022",
+        "description": "Academic education with emphasis on exact sciences and technology.",
+        "achievements": [
+          "Graduated with honors",
+          "Early interest in programming"
+        ]
+      }
+    ],
+    "work": [
+      {
+        "title": "Junior Web Developer",
+        "organization": "University Project",
+        "location": "Colombia",
+        "period": "2024 - Present",
+        "description": "Development of web applications as part of academic and personal projects, applying programming and design knowledge.",
+        "achievements": [
+          "Development of responsive interfaces",
+          "Implementation of business logic",
+          "Teamwork with agile methodologies"
+        ]
+      }
+    ]
+  },
+  "Testimonials": {
+    "badge": "Testimonials",
+    "heading": "What People Say About Me",
+    "sub": "Opinions from professors, classmates and mentors who have worked with me",
+    "items": [
+      {
+        "name": "Maria Garcia",
+        "role": "Programming Professor",
+        "company": "Universidad Cooperativa de Colombia",
+        "content": "Andres is an exceptional student with an impressive ability to solve problems. His dedication and passion for programming are evident in every project he delivers.",
+        "avatar": "MG"
+      },
+      {
+        "name": "Carlos Rodriguez",
+        "role": "Project Teammate",
+        "company": "Universidad Cooperativa de Colombia",
+        "content": "Working with Andres was an incredible experience. His ability to communicate technical ideas and his willingness to help the team made our project a success.",
+        "avatar": "CR"
+      },
+      {
+        "name": "Laura Martinez",
+        "role": "Tech Mentor",
+        "company": "Comunidad Dev Colombia",
+        "content": "I've watched Andres grow as a developer and I can say he has a brilliant future. His curiosity and eagerness to learn are admirable.",
+        "avatar": "LM"
+      },
+      {
+        "name": "Juan Pablo Hernandez",
+        "role": "Project Lead",
+        "company": "Hackathon UCC 2024",
+        "content": "During the hackathon, Andres demonstrated technical leadership and creativity. His ability to work under pressure and deliver quality results is impressive.",
+        "avatar": "JH"
+      }
+    ]
+  },
+  "Contact": {
+    "badge": "Contact",
+    "heading": "Let's talk about your",
+    "headingHighlight": "Project",
+    "sub": "Got an idea in mind? I'd love to hear it",
+    "phoneLabel": "Phone",
+    "locationLabel": "Location",
+    "connectTitle": "Connect with me",
+    "availabilityTitle": "Available for projects",
+    "availabilityDesc": "Looking for job opportunities and freelance projects. Contact me!",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "What do you want to talk about?",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell me more about your project...",
+    "submitButton": "Send Message",
+    "submitting": "Sending...",
+    "successTitle": "Message Sent!",
+    "successDesc": "Thanks for reaching out. I'll get back to you soon."
+  },
+  "Footer": {
+    "navTitle": "Navigation",
+    "moreTitle": "More",
+    "roleLabel": "Web Developer",
+    "copyright": "Made with",
+    "copyrightPost": "in Colombia",
+    "backToTop": "Back to top",
+    "nav": {
+      "inicio": "Home",
+      "about": "About Me",
+      "skills": "Skills",
+      "projects": "Projects"
+    },
+    "more": {
+      "experience": "Experience",
+      "testimonials": "Testimonials",
+      "contact": "Contact"
+    }
+  }
+}
