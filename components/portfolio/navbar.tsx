@@ -59,7 +59,7 @@ export function Navbar() {
     <nav
       className={cn(
         "fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500",
-        scrolled ? "w-[95%] max-w-5xl" : "w-[90%] max-w-6xl"
+        scrolled ? "w-[95%] max-w-6xl" : "w-[90%] max-w-6xl"
       )}
     >
       <div className={cn(
