@@ -19,7 +19,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'Andres Chacua | Desarrollador Web',
   description: 'Portafolio profesional de Andres Chacua - Desarrollador Web y estudiante de la Universidad Cooperativa de Colombia',
-  generator: 'v0.app',
+  generator: 'Andres Chacua',
   icons: {
     icon: [
       {

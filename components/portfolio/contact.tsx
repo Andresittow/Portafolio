@@ -44,10 +44,10 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-28 relative">
+    <section id="contact" className="py-16 sm:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <RevealText
             as="div"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6"
@@ -84,14 +84,14 @@ export function Contact() {
                     <div className="w-14 h-14 rounded-2xl bg-white dark:bg-card shadow-lg shadow-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:shadow-primary/20 transition-all duration-300 shrink-0">
                       <info.icon className="text-primary" size={24} />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-sm text-muted-foreground font-medium">{info.label}</p>
                       {info.href ? (
-                        <a href={info.href} className="font-semibold text-foreground hover:text-primary transition-colors text-lg">
+                        <a href={info.href} className="font-semibold text-foreground hover:text-primary transition-colors text-base sm:text-lg break-all">
                           {info.value}
                         </a>
                       ) : (
-                        <p className="font-semibold text-foreground text-lg">{info.value}</p>
+                        <p className="font-semibold text-foreground text-base sm:text-lg">{info.value}</p>
                       )}
                     </div>
                   </div>

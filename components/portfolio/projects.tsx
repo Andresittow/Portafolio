@@ -57,14 +57,14 @@ export function Projects() {
   }))
 
   return (
-    <section id="projects" className="py-28 relative overflow-hidden">
+    <section id="projects" className="py-16 sm:py-28 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-12 sm:mb-20">
           <RevealText
             as="div"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6"
@@ -97,7 +97,7 @@ export function Projects() {
                 onMouseEnter={() => setHoveredId(project.id)}
                 onMouseLeave={() => setHoveredId(null)}
                 className={cn(
-                  "group relative bg-white dark:bg-card rounded-3xl overflow-hidden transition-all duration-500 h-full",
+                  "group relative bg-white dark:bg-card rounded-3xl overflow-hidden transition-all duration-500 h-full flex flex-col",
                   "border border-border/50 hover:border-transparent",
                   "float-shadow card-hover",
                   index === 0 && "lg:row-span-2"
@@ -105,9 +105,9 @@ export function Projects() {
               >
                 {/* Gradient Header */}
                 <div className={cn(
-                  "relative h-48 lg:h-56 bg-gradient-to-br p-8 flex flex-col justify-between overflow-hidden",
+                  "relative bg-gradient-to-br p-8 flex flex-col justify-between overflow-hidden flex-1",
                   project.color,
-                  index === 0 && "lg:h-full lg:min-h-[400px]"
+                  index === 0 ? "h-64 lg:h-auto" : "h-48 lg:h-56"
                 )}>
                   {/* Animated circles */}
                   <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700" />

@@ -113,13 +113,13 @@ export function Skills() {
       : skills.filter((skill) => skill.category === activeCategory)
 
   return (
-    <section id="skills" className="py-28 relative overflow-hidden">
+    <section id="skills" className="py-16 sm:py-28 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 via-transparent to-secondary/30" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <RevealText
             as="div"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6"

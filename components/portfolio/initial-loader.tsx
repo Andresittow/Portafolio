@@ -16,9 +16,9 @@ const greetings = [
 ]
 
 // Duration in ms each greeting is visible (except the last)
-const WORD_DURATION = 180
+const WORD_DURATION = 350
 // How long "Hola" stays before exit
-const FINAL_HOLD = 900
+const FINAL_HOLD = 1200
 // Exit animation duration
 const EXIT_DURATION = 0.7
 
@@ -66,12 +66,15 @@ export function InitialLoader({ onComplete }: InitialLoaderProps) {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 1.04 }}
           transition={{ duration: EXIT_DURATION, ease: [0.76, 0, 0.24, 1] }}
-          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-primary"
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center"
+          style={{ background: "#060b18" }}
           aria-live="polite"
           aria-label="Cargando portafolio"
         >
-          {/* Subtle radial glow */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,rgba(255,255,255,0.08),transparent)] pointer-events-none" />
+          {/* Deep radial blue glow */}
+          <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 70% 55% at 50% 50%, rgba(37,99,235,0.22) 0%, rgba(14,165,233,0.07) 55%, transparent 100%)" }} />
+          {/* Noise/grain texture overlay */}
+          <div className="absolute inset-0 pointer-events-none opacity-[0.035]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")" }} />
 
           {/* Counter bar */}
           <motion.div
@@ -96,27 +99,43 @@ export function InitialLoader({ onComplete }: InitialLoaderProps) {
           </motion.div>
 
           {/* Greeting word */}
-          <div className="relative overflow-hidden">
+          <div className="relative flex items-center justify-center">
+            {/* Soft bloom glow — radial gradient behind text, blends naturally */}
+            <motion.div
+              key={`glow-${index}`}
+              initial={{ opacity: 0, scale: 0.6 }}
+              animate={{
+                opacity: index === greetings.length - 1 ? 0.55 : 0.3,
+                scale: 1,
+              }}
+              exit={{ opacity: 0, scale: 0.7 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="absolute pointer-events-none"
+              style={{
+                width: "clamp(300px, 60vw, 700px)",
+                height: "clamp(150px, 25vw, 320px)",
+                background:
+                  index === greetings.length - 1
+                    ? "radial-gradient(ellipse at 50% 50%, rgba(147,197,255,0.45) 0%, rgba(99,160,255,0.2) 35%, transparent 70%)"
+                    : "radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.2) 0%, rgba(200,220,255,0.08) 40%, transparent 70%)",
+                filter: "blur(18px)",
+              }}
+            />
             <AnimatePresence mode="wait">
               <motion.span
                 key={index}
-                initial={{ y: 60, opacity: 0, filter: "blur(8px)" }}
-                animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-                exit={{ y: -60, opacity: 0, filter: "blur(8px)" }}
+                initial={{ y: 40, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -40, opacity: 0 }}
                 transition={{
-                  duration: 0.22,
+                  duration: 0.12,
                   ease: [0.76, 0, 0.24, 1],
                 }}
-                className="block text-white font-extrabold text-center leading-none select-none"
+                className="relative block text-white font-extrabold text-center leading-none select-none"
                 style={{
                   fontSize: "clamp(4rem, 14vw, 10rem)",
                   fontFamily: "var(--font-plus-jakarta), system-ui, sans-serif",
                   direction: isArabic ? "rtl" : "ltr",
-                  // Last greeting gets a subtle glow
-                  textShadow:
-                    index === greetings.length - 1
-                      ? "0 0 60px rgba(255,255,255,0.35)"
-                      : "none",
                 }}
               >
                 {greetings[index].word}

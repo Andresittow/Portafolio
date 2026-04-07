@@ -64,10 +64,10 @@ export function Hero() {
       {/* Subtle grid */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:80px_80px]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {/* Badge */}
             <motion.div
               initial="hidden"
@@ -87,10 +87,10 @@ export function Hero() {
             {/* Heading */}
             <div className="space-y-4">
               <div className="space-y-1">
-                <RevealText as="h1" className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight text-foreground" delay={0.05}>
+                <RevealText as="h1" className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight tracking-tight text-foreground" delay={0.05}>
                   {t("greeting")}
                 </RevealText>
-                <RevealText as="span" className="block text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight text-gradient" delay={0.18}>
+                <RevealText as="span" className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight tracking-tight text-gradient" delay={0.18}>
                   Andres Chacua
                 </RevealText>
               </div>
@@ -101,7 +101,7 @@ export function Hero() {
                 transition={{ delay: 0.4 }}
                 className="h-10 sm:h-12"
               >
-                <span className="text-2xl sm:text-3xl text-muted-foreground font-medium">
+                <span className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground font-medium">
                   {displayText}
                   <span className="animate-pulse text-primary ml-0.5">|</span>
                 </span>
@@ -109,7 +109,7 @@ export function Hero() {
             </div>
 
             {/* Description */}
-            <RevealText as="p" className="text-xl text-muted-foreground max-w-lg leading-relaxed" delay={0.1}>
+            <RevealText as="p" className="text-base sm:text-xl text-muted-foreground max-w-lg leading-relaxed" delay={0.1}>
               {t("descriptionPre")}{" "}
               <span className="text-foreground font-semibold">
                 {t("university")}
@@ -118,11 +118,11 @@ export function Hero() {
             </RevealText>
 
             {/* Buttons */}
-            <StaggerContainer className="flex flex-wrap gap-4" delay={0.2}>
+            <StaggerContainer className="flex flex-wrap gap-3 sm:gap-4" delay={0.2}>
               <StaggerItem>
                 <a
                   href="#contact"
-                  className="group inline-flex items-center gap-3 px-7 py-4 bg-gradient-to-r from-primary to-accent text-white rounded-2xl font-bold hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 hover:scale-105"
+                  className="group inline-flex items-center gap-2 sm:gap-3 px-5 py-3 sm:px-7 sm:py-4 bg-gradient-to-r from-primary to-accent text-white rounded-2xl font-bold hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 hover:scale-105 text-sm sm:text-base"
                 >
                   <Sparkles size={20} />
                   {t("cta")}
@@ -132,7 +132,7 @@ export function Hero() {
                 <a
                   href="/cv-andres-chacua.pdf"
                   download
-                  className="inline-flex items-center gap-3 px-7 py-4 bg-white dark:bg-card text-foreground rounded-2xl font-bold border-2 border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center gap-2 sm:gap-3 px-5 py-3 sm:px-7 sm:py-4 bg-white dark:bg-card text-foreground rounded-2xl font-bold border-2 border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 hover:scale-105 text-sm sm:text-base"
                 >
                   <Download size={20} />
                   {t("cvDownload")}
@@ -172,32 +172,32 @@ export function Hero() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="relative flex justify-center lg:justify-end"
+            className="relative flex justify-center lg:justify-end mt-6 lg:mt-0"
           >
             <div className="relative">
               {/* Decorative elements */}
               <div className="absolute -inset-8 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-2xl animate-pulse" />
               
               {/* Main avatar container */}
-              <div className="relative w-80 h-80 sm:w-96 sm:h-96">
+              <div className="relative w-60 h-60 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-[3rem] rotate-6 opacity-20" />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-[3rem] -rotate-6 opacity-10" />
                 <div className="relative h-full bg-white dark:bg-card rounded-[3rem] shadow-2xl shadow-primary/20 flex items-center justify-center overflow-hidden border border-border/50">
-                  <div className="text-9xl sm:text-[10rem] font-black text-gradient">
+                  <div className="text-8xl sm:text-9xl lg:text-[10rem] font-black text-gradient">
                     AC
                   </div>
                 </div>
               </div>
 
               {/* Floating badges */}
-              <div className="absolute -top-4 -right-4 px-5 py-2.5 bg-white dark:bg-card rounded-2xl shadow-xl shadow-primary/10 border border-border/50 animate-bounce">
-                <span className="text-sm font-bold text-foreground">Java</span>
+              <div className="absolute -top-2 right-2 sm:-top-4 sm:-right-4 px-3 py-1.5 sm:px-5 sm:py-2.5 bg-white dark:bg-card rounded-2xl shadow-xl shadow-primary/10 border border-border/50 animate-bounce">
+                <span className="text-xs sm:text-sm font-bold text-foreground">Java</span>
               </div>
-              <div className="absolute -bottom-4 -left-4 px-5 py-2.5 bg-white dark:bg-card rounded-2xl shadow-xl shadow-primary/10 border border-border/50 animate-bounce" style={{ animationDelay: "150ms" }}>
-                <span className="text-sm font-bold text-foreground">Python</span>
+              <div className="absolute -bottom-2 left-2 sm:-bottom-4 sm:-left-4 px-3 py-1.5 sm:px-5 sm:py-2.5 bg-white dark:bg-card rounded-2xl shadow-xl shadow-primary/10 border border-border/50 animate-bounce" style={{ animationDelay: "150ms" }}>
+                <span className="text-xs sm:text-sm font-bold text-foreground">Python</span>
               </div>
-              <div className="absolute top-1/2 -right-8 px-5 py-2.5 bg-gradient-to-r from-primary to-accent text-white rounded-2xl shadow-xl shadow-primary/30 animate-bounce" style={{ animationDelay: "300ms" }}>
-                <span className="text-sm font-bold">Tailwind</span>
+              <div className="absolute top-1/2 -translate-y-1/2 right-1 sm:-right-8 px-3 py-1.5 sm:px-5 sm:py-2.5 bg-gradient-to-r from-primary to-accent text-white rounded-2xl shadow-xl shadow-primary/30 animate-bounce" style={{ animationDelay: "300ms" }}>
+                <span className="text-xs sm:text-sm font-bold">Tailwind</span>
               </div>
             </div>
           </motion.div>
