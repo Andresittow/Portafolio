@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, Sun, Moon, Globe } from "lucide-react"
+import { Menu, X, Sparkles, Sun, Moon, Globe } from "lucide-react"
 import { useTheme } from "next-themes"
 import { useTranslations } from "next-intl"
 import { useLocale } from "@/components/locale-provider"
