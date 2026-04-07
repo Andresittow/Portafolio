@@ -5,21 +5,21 @@ import { ThemeProvider } from '@/components/ui/theme-provider'
 import { LocaleProvider } from '@/components/locale-provider'
 import './globals.css'
 
-const plusJakarta = Plus_Jakarta_Sans({ 
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: '--font-plus-jakarta',
   weight: ['300', '400', '500', '600', '700', '800']
 });
 
-const jetbrainsMono = JetBrains_Mono({ 
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: '--font-jetbrains'
 });
 
 export const metadata: Metadata = {
-  title: 'Andres Chacua | Desarrollador Web',
-  description: 'Portafolio profesional de Andres Chacua - Desarrollador Web y estudiante de la Universidad Cooperativa de Colombia',
-  generator: 'Andres Chacua',
+  title: 'Andrés Chacua | Desarrollador Web',
+  description: 'Portafolio profesional de Andrés Chacua - Desarrollador Web y estudiante de la Universidad Cooperativa de Colombia',
+  generator: 'Andrés Chacua',
   icons: {
     icon: [
       {

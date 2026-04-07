@@ -13,7 +13,7 @@ const projectsData = [
     id: 1,
     title: "FinTrack Pro",
     tags: ["Java", "Python", "Tailwind"],
-    github: "https://github.com/andreschacua/fintrack",
+    github: "https://github.com/Andréschacua/fintrack",
     demo: "https://fintrack-demo.vercel.app",
     color: "from-blue-500 to-cyan-400",
     shadowColor: "shadow-blue-500/20",
@@ -22,7 +22,7 @@ const projectsData = [
     id: 2,
     title: "DevConnect Hub",
     tags: ["Python", "HTML", "CSS"],
-    github: "https://github.com/andreschacua/devconnect",
+    github: "https://github.com/Andréschacua/devconnect",
     demo: "https://devconnect-demo.vercel.app",
     color: "from-violet-500 to-purple-400",
     shadowColor: "shadow-violet-500/20",
@@ -31,7 +31,7 @@ const projectsData = [
     id: 3,
     title: "EcoMarket Place",
     tags: ["HTML", "CSS", "Tailwind"],
-    github: "https://github.com/andreschacua/ecomarket",
+    github: "https://github.com/Andréschacua/ecomarket",
     demo: "https://ecomarket-demo.vercel.app",
     color: "from-emerald-500 to-teal-400",
     shadowColor: "shadow-emerald-500/20",
@@ -40,7 +40,7 @@ const projectsData = [
     id: 4,
     title: "TaskFlow AI",
     tags: ["Java", "Python", "HTML"],
-    github: "https://github.com/andreschacua/taskflow",
+    github: "https://github.com/Andréschacua/taskflow",
     demo: "https://taskflow-demo.vercel.app",
     color: "from-orange-500 to-amber-400",
     shadowColor: "shadow-orange-500/20",
@@ -61,7 +61,7 @@ export function Projects() {
       {/* Background decorations */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
-      
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-20">
@@ -112,7 +112,7 @@ export function Projects() {
                   {/* Animated circles */}
                   <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700" />
                   <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-white/10 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-700 delay-100" />
-                  
+
                   {/* Project number */}
                   <div className="relative">
                     <span className="text-white/30 text-7xl font-black">0{project.id}</span>
@@ -144,7 +144,7 @@ export function Projects() {
                   <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
                     {project.title}
                   </h3>
-                  
+
                   <p className="text-muted-foreground leading-relaxed mb-6">
                     {project.description}
                   </p>
@@ -190,7 +190,7 @@ export function Projects() {
         {/* View More CTA */}
         <div className="text-center mt-16">
           <a
-            href="https://github.com/Andresittow"
+            href="https://github.com/Andrésittow"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background rounded-2xl font-semibold hover:bg-foreground/90 transition-all duration-300 hover:scale-105 hover:shadow-xl"

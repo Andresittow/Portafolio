@@ -13,7 +13,11 @@
   "Hero": {
     "badge": "Available for work",
     "greeting": "Hi, I'm",
-    "roles": ["Web Developer", "Software Engineering Student", "Passionate about technology"],
+    "roles": [
+      "Web Developer",
+      "Software Engineering Student",
+      "Passionate about technology"
+    ],
     "descriptionPre": "Student at",
     "university": "Universidad Cooperativa de Colombia",
     "descriptionPost": ", creating exceptional digital experiences with clean code and modern design.",
@@ -28,7 +32,7 @@
     "sub": "A glimpse into who I am, what motivates me and where I'm heading",
     "quote": "Code is poetry that machines can understand and humans can appreciate.",
     "p1Pre": "I'm",
-    "p1Name": "Andres Chacua",
+    "p1Name": "Andrés Chacua",
     "p1Mid": ", a passionate web developer and student at",
     "p1Uni": "Universidad Cooperativa de Colombia",
     "p1Post": ". I specialize in creating attractive and functional user interfaces using modern technologies.",
@@ -178,28 +182,28 @@
         "name": "Maria Garcia",
         "role": "Programming Professor",
         "company": "Universidad Cooperativa de Colombia",
-        "content": "Andres is an exceptional student with an impressive ability to solve problems. His dedication and passion for programming are evident in every project he delivers.",
+        "content": "Andrés is an exceptional student with an impressive ability to solve problems. His dedication and passion for programming are evident in every project he delivers.",
         "avatar": "MG"
       },
       {
         "name": "Carlos Rodriguez",
         "role": "Project Teammate",
         "company": "Universidad Cooperativa de Colombia",
-        "content": "Working with Andres was an incredible experience. His ability to communicate technical ideas and his willingness to help the team made our project a success.",
+        "content": "Working with Andrés was an incredible experience. His ability to communicate technical ideas and his willingness to help the team made our project a success.",
         "avatar": "CR"
       },
       {
         "name": "Laura Martinez",
         "role": "Tech Mentor",
         "company": "Comunidad Dev Colombia",
-        "content": "I've watched Andres grow as a developer and I can say he has a brilliant future. His curiosity and eagerness to learn are admirable.",
+        "content": "I've watched Andrés grow as a developer and I can say he has a brilliant future. His curiosity and eagerness to learn are admirable.",
         "avatar": "LM"
       },
       {
         "name": "Juan Pablo Hernandez",
         "role": "Project Lead",
         "company": "Hackathon UCC 2024",
-        "content": "During the hackathon, Andres demonstrated technical leadership and creativity. His ability to work under pressure and deliver quality results is impressive.",
+        "content": "During the hackathon, Andrés demonstrated technical leadership and creativity. His ability to work under pressure and deliver quality results is impressive.",
         "avatar": "JH"
       }
     ]

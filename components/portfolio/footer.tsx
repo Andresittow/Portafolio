@@ -6,10 +6,10 @@ import { StaggerContainer } from "@/components/ui/stagger-container"
 import { StaggerItem } from "@/components/ui/stagger-item"
 
 const socialLinks = [
-  { icon: Github,   href: "https://github.com/Andresittow",           label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/aandresitohh",     label: "LinkedIn" },
-  { icon: X,        href: "https://twitter.com/andreschacua",         label: "Twitter" },
-  { icon: Mail,     href: "mailto:andreschacua24@gmail.com",          label: "Email" },
+  { icon: Github, href: "https://github.com/Andrésittow", label: "GitHub" },
+  { icon: Linkedin, href: "https://linkedin.com/in/aAndrésitohh", label: "LinkedIn" },
+  { icon: X, href: "https://twitter.com/Andréschacua", label: "Twitter" },
+  { icon: Mail, href: "mailto:Andréschacua24@gmail.com", label: "Email" },
 ]
 
 export function Footer() {
@@ -17,15 +17,15 @@ export function Footer() {
 
   const footerLinks = {
     navigation: [
-      { label: t("nav.inicio"),   href: "#inicio" },
-      { label: t("nav.about"),    href: "#about" },
-      { label: t("nav.skills"),   href: "#skills" },
+      { label: t("nav.inicio"), href: "#inicio" },
+      { label: t("nav.about"), href: "#about" },
+      { label: t("nav.skills"), href: "#skills" },
       { label: t("nav.projects"), href: "#projects" },
     ],
     more: [
-      { label: t("more.experience"),   href: "#experience" },
+      { label: t("more.experience"), href: "#experience" },
       { label: t("more.testimonials"), href: "#testimonials" },
-      { label: t("more.contact"),      href: "#contact" },
+      { label: t("more.contact"), href: "#contact" },
     ],
   }
 
@@ -36,7 +36,7 @@ export function Footer() {
     <footer className="relative bg-gradient-to-b from-background to-secondary/30">
       {/* Decorative top border */}
       <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-      
+
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -104,7 +104,7 @@ export function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground flex items-center gap-2">
-              © {currentYear} Andres Chacua. {t("copyright")}{" "}
+              © {currentYear} Andrés Chacua. {t("copyright")}{" "}
               <Heart size={14} className="text-red-500 fill-red-500 animate-pulse" /> {t("copyrightPost")}
             </p>
 

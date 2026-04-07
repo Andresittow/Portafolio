@@ -91,7 +91,7 @@ export function Hero() {
                   {t("greeting")}
                 </RevealText>
                 <RevealText as="span" className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight tracking-tight text-gradient" delay={0.18}>
-                  Andres Chacua
+                  Andrés Chacua
                 </RevealText>
               </div>
               <motion.div
@@ -130,7 +130,7 @@ export function Hero() {
               </StaggerItem>
               <StaggerItem>
                 <a
-                  href="/cv-andres-chacua.pdf"
+                  href="/cv-Andrés-chacua.pdf"
                   download
                   className="inline-flex items-center gap-2 sm:gap-3 px-5 py-3 sm:px-7 sm:py-4 bg-white dark:bg-card text-foreground rounded-2xl font-bold border-2 border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 hover:scale-105 text-sm sm:text-base"
                 >
@@ -147,9 +147,9 @@ export function Hero() {
               </StaggerItem>
               <div className="flex items-center gap-2">
                 {[
-                  { icon: Github, href: "https://github.com/Andresittow", label: "GitHub" },
+                  { icon: Github, href: "https://github.com/Andrésittow", label: "GitHub" },
                   { icon: Linkedin, href: "https://www.linkedin.com/in/edison-chacua1313/", label: "LinkedIn" },
-                  { icon: Mail, href: "mailto:andreschacua24@gmail.com", label: "Email" },
+                  { icon: Mail, href: "mailto:Andréschacua24@gmail.com", label: "Email" },
                 ].map((social) => (
                   <StaggerItem key={social.label}>
                     <a
@@ -177,7 +177,7 @@ export function Hero() {
             <div className="relative">
               {/* Decorative elements */}
               <div className="absolute -inset-8 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-2xl animate-pulse" />
-              
+
               {/* Main avatar container */}
               <div className="relative w-60 h-60 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-[3rem] rotate-6 opacity-20" />

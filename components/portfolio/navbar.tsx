@@ -18,12 +18,12 @@ export function Navbar() {
   const t = useTranslations("Navbar")
 
   const navLinks = [
-    { href: "#inicio",      label: t("inicio") },
-    { href: "#about",       label: t("about") },
-    { href: "#skills",      label: t("skills") },
-    { href: "#projects",    label: t("projects") },
-    { href: "#experience",  label: t("experience") },
-    { href: "#testimonials",label: t("testimonials") },
+    { href: "#inicio", label: t("inicio") },
+    { href: "#about", label: t("about") },
+    { href: "#skills", label: t("skills") },
+    { href: "#projects", label: t("projects") },
+    { href: "#experience", label: t("experience") },
+    { href: "#testimonials", label: t("testimonials") },
   ]
 
   // Avoid hydration mismatch
@@ -78,7 +78,7 @@ export function Navbar() {
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-white dark:border-slate-900 animate-pulse" />
               </div>
               <div className="hidden sm:block">
-                <span className="block font-bold text-foreground text-sm tracking-tight">Andres Chacua</span>
+                <span className="block font-bold text-foreground text-sm tracking-tight">Andrés Chacua</span>
                 <span className="block text-xs text-muted-foreground">Developer</span>
               </div>
             </a>
