@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, Sparkles, Sun, Moon, Globe } from "lucide-react"
+import { Menu, X, Sun, Moon, Globe } from "lucide-react"
 import { useTheme } from "next-themes"
 import { useTranslations } from "next-intl"
 import { useLocale } from "@/components/locale-provider"
@@ -18,13 +18,12 @@ export function Navbar() {
   const t = useTranslations("Navbar")
 
   const navLinks = [
-    { href: "#inicio", label: t("inicio") },
-    { href: "#about", label: t("about") },
-    { href: "#skills", label: t("skills") },
-    { href: "#projects", label: t("projects") },
-    { href: "#experience", label: t("experience") },
-    { href: "#testimonials", label: t("testimonials") },
-    { href: "#contact", label: t("contact") },
+    { href: "#inicio",      label: t("inicio") },
+    { href: "#about",       label: t("about") },
+    { href: "#skills",      label: t("skills") },
+    { href: "#projects",    label: t("projects") },
+    { href: "#experience",  label: t("experience") },
+    { href: "#testimonials",label: t("testimonials") },
   ]
 
   // Avoid hydration mismatch
@@ -59,7 +58,7 @@ export function Navbar() {
     <nav
       className={cn(
         "fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500",
-        scrolled ? "w-[95%] max-w-6xl" : "w-[90%] max-w-6xl"
+        scrolled ? "w-[96%] max-w-5xl" : "w-[90%] max-w-5xl"
       )}
     >
       <div className={cn(
@@ -92,7 +91,7 @@ export function Navbar() {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      "relative px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300",
+                      "relative px-2.5 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap",
                       activeSection === link.href.replace("#", "")
                         ? "text-white"
                         : "text-muted-foreground hover:text-foreground"
@@ -107,13 +106,16 @@ export function Navbar() {
               </div>
             </div>
 
-            {/* Right side: Lang + Theme Toggle + CTA + Mobile Button */}
+            {/* Right side: divider + Lang + Theme + Mobile Button */}
             <div className="flex items-center gap-2">
+              {/* Visual separator from nav pill (desktop only) */}
+              <div className="hidden lg:block w-px h-6 bg-border/60 mx-1" />
+
               {/* Language Toggle */}
               <button
                 onClick={toggleLocale}
                 aria-label="Switch language"
-                className="flex items-center gap-1.5 h-10 px-3 rounded-xl bg-secondary/50 hover:bg-secondary dark:hover:bg-slate-700 text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-105"
+                className="flex items-center gap-1.5 h-9 px-3 rounded-xl bg-secondary/50 hover:bg-secondary dark:hover:bg-slate-700 text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-105"
               >
                 <Globe size={15} className="shrink-0" />
                 <span className="text-xs font-bold tracking-wider">
@@ -125,7 +127,7 @@ export function Navbar() {
               <button
                 onClick={toggleTheme}
                 aria-label="Toggle dark mode"
-                className="w-10 h-10 rounded-xl bg-secondary/50 hover:bg-secondary dark:hover:bg-slate-700 flex items-center justify-center transition-all duration-300 hover:scale-105"
+                className="w-9 h-9 rounded-xl bg-secondary/50 hover:bg-secondary dark:hover:bg-slate-700 flex items-center justify-center transition-all duration-300 hover:scale-105"
               >
                 <AnimatePresence mode="wait" initial={false}>
                   {mounted && (
@@ -137,8 +139,8 @@ export function Navbar() {
                       transition={{ duration: 0.2 }}
                     >
                       {isDark
-                        ? <Sun size={18} className="text-yellow-400" />
-                        : <Moon size={18} className="text-slate-600" />
+                        ? <Sun size={17} className="text-yellow-400" />
+                        : <Moon size={17} className="text-slate-600" />
                       }
                     </motion.span>
                   )}
@@ -175,7 +177,7 @@ export function Navbar() {
             isOpen ? "max-h-[500px] pb-4" : "max-h-0"
           )}
         >
-          <div className="px-4 space-y-1">
+          <div className="px-4 pb-2 space-y-1">
             {navLinks.map((link, index) => (
               <a
                 key={link.href}
@@ -193,16 +195,6 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
-            <div className="pt-3">
-              <a
-                href="#contact"
-                onClick={() => setIsOpen(false)}
-                className="flex items-center justify-center gap-2 w-full px-4 py-3.5 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-semibold text-sm shadow-lg shadow-primary/20"
-              >
-                <Sparkles size={16} />
-                {t("cta")}
-              </a>
-            </div>
           </div>
         </div>
       </div>
