@@ -6,10 +6,10 @@ import { StaggerContainer } from "@/components/ui/stagger-container"
 import { StaggerItem } from "@/components/ui/stagger-item"
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/Andrésittow", label: "GitHub" },
+  { icon: Github, href: "https://github.com/Andresittow", label: "GitHub" },
   { icon: Linkedin, href: "https://linkedin.com/in/aAndrésitohh", label: "LinkedIn" },
-  { icon: X, href: "https://twitter.com/Andréschacua", label: "Twitter" },
-  { icon: Mail, href: "mailto:Andréschacua24@gmail.com", label: "Email" },
+  { icon: X, href: "https://twitter.com/aandresitohh", label: "Twitter" },
+  { icon: Mail, href: "mailto:andreschacua24@gmail.com", label: "Email" },
 ]
 
 export function Footer() {

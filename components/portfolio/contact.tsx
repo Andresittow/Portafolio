@@ -20,7 +20,7 @@ export function Contact() {
   const t = useTranslations("Contact")
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "andreschacua24@gmail.com", href: "mailto:Andréschacua24@gmail.com" },
+    { icon: Mail, label: "Email", value: "andreschacua24@gmail.com", href: "mailto:andreschacua24@gmail.com" },
     { icon: Phone, label: t("phoneLabel"), value: "+57 318 581 1263", href: "tel:+573185811263" },
     { icon: MapPin, label: t("locationLabel"), value: "Colombia", href: null },
   ]
