@@ -11,16 +11,16 @@ import { StaggerContainer } from "@/components/ui/stagger-container"
 import { StaggerItem } from "@/components/ui/stagger-item"
 
 const socialLinks = [
-  { icon: Github, label: "GitHub", href: "https://github.com/Andrésittow", color: "hover:bg-gray-900 hover:text-white" },
+  { icon: Github, label: "GitHub", href: "https://github.com/Andresittow", color: "hover:bg-gray-900 hover:text-white" },
   { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/edison-chacua1313/", color: "hover:bg-blue-600 hover:text-white" },
-  { icon: X, label: "X", href: "https://x.com/aAndrésitohh", color: "hover:bg-sky-500 hover:text-white" },
+  { icon: X, label: "X", href: "https://x.com/aandresitohh", color: "hover:bg-sky-500 hover:text-white" },
 ]
 
 export function Contact() {
   const t = useTranslations("Contact")
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "Andréschacua24@gmail.com", href: "mailto:Andréschacua24@gmail.com" },
+    { icon: Mail, label: "Email", value: "andreschacua24@gmail.com", href: "mailto:Andréschacua24@gmail.com" },
     { icon: Phone, label: t("phoneLabel"), value: "+57 318 581 1263", href: "tel:+573185811263" },
     { icon: MapPin, label: t("locationLabel"), value: "Colombia", href: null },
   ]

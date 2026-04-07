@@ -147,9 +147,9 @@ export function Hero() {
               </StaggerItem>
               <div className="flex items-center gap-2">
                 {[
-                  { icon: Github, href: "https://github.com/Andrésittow", label: "GitHub" },
+                  { icon: Github, href: "https://github.com/Andresittow", label: "GitHub" },
                   { icon: Linkedin, href: "https://www.linkedin.com/in/edison-chacua1313/", label: "LinkedIn" },
-                  { icon: Mail, href: "mailto:Andréschacua24@gmail.com", label: "Email" },
+                  { icon: Mail, href: "mailto:andreschacua24@gmail.com", label: "Email" },
                 ].map((social) => (
                   <StaggerItem key={social.label}>
                     <a
