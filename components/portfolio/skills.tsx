@@ -130,7 +130,7 @@ export function Skills() {
           </RevealText>
           <RevealText
             as="h2"
-            className="text-4xl sm:text-5xl font-extrabold text-foreground mb-6 tracking-tight"
+            className="text-4xl sm:text-5xl font-extrabold text-foreground mb-6 tracking-tight pb-2"
             delay={0.1}
           >
             {t("heading")} <span className="text-gradient">{t("headingHighlight")}</span>
