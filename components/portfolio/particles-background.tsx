@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useEffect, useMemo, useState } from "react"
 import Particles, { initParticlesEngine } from "@tsparticles/react"
 import { loadSlim } from "@tsparticles/slim"
 import { useTheme } from "next-themes"
@@ -24,23 +24,26 @@ export function ParticlesBackground() {
   }, [])
 
   useEffect(() => {
+    // Don't even initialize the engine on mobile — huge perf win
+    if (isMobile) return
     initParticlesEngine(async (engine) => {
       await loadSlim(engine)
     }).then(() => setEngineReady(true))
-  }, [])
+  }, [isMobile])
 
   const isDark = mounted && resolvedTheme === "dark"
 
-  const options: ISourceOptions = {
+  // Memoize options so they don't get re-created on every render
+  const options: ISourceOptions = useMemo(() => ({
     fullScreen: {
       enable: true,
-      zIndex: 1,             // main is z:10, so it sits above canvas
+      zIndex: 1,
     },
-    fpsLimit: 60,
+    fpsLimit: 45, // reduced from 60 — imperceptible but saves GPU budget
     background: { color: { value: "transparent" } },
     particles: {
       number: {
-        value: isMobile ? 18 : 50,
+        value: 35, // reduced from 50 on desktop
         density: { enable: true, width: 1200, height: 800 },
       },
       color: {
@@ -85,7 +88,7 @@ export function ParticlesBackground() {
       detectsOn: "window",
       events: {
         onHover: {
-          enable: !prefersReduced && !isMobile,
+          enable: !prefersReduced,
           mode: "repulse",
         },
         resize: { enable: true },
@@ -101,11 +104,13 @@ export function ParticlesBackground() {
       },
     },
     detectRetina: true,
-  }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }), [isDark, prefersReduced])
 
   const particlesLoaded = useCallback(async () => {}, [])
 
-  if (!engineReady || !mounted) return null
+  // Don't render on mobile at all — huge perf win
+  if (isMobile || !engineReady || !mounted) return null
 
   return (
     <Particles

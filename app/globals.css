@@ -155,4 +155,26 @@
   #tsparticles canvas {
     pointer-events: none !important;
   }
+
+  /* Performance: promote heavy animated blobs to their own compositor layer */
+  .animate-pulse {
+    will-change: opacity;
+  }
+
+  /* Performance: contain paint for off-screen sections */
+  section {
+    contain: layout style;
+  }
+
+  /* Performance: disable all CSS animations/transitions for users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }

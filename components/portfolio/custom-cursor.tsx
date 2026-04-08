@@ -40,6 +40,8 @@ export function CustomCursor() {
   // Magnetic state — offset applied to the magnetic element
   const magneticTargetRef = useRef<HTMLElement | null>(null)
   const magneticAnimFrame = useRef<number | null>(null)
+  // Cache magnetic elements to avoid querySelectorAll on every mousemove
+  const magneticEls = useRef<HTMLElement[]>([])
 
   useEffect(() => {
     // Only activate on pointer:fine (mouse) devices
@@ -76,15 +78,19 @@ export function CustomCursor() {
       if (t) setIsHovering(false)
     }
 
-    // ── Magnetic effect ──────────────────────────────────────────────────────
-    const magneticEls = () =>
-      Array.from(document.querySelectorAll<HTMLElement>("[data-magnetic]"))
+    // ── Magnetic element cache (refresh via MutationObserver) ──────────────
+    const refreshMagnetic = () => {
+      magneticEls.current = Array.from(document.querySelectorAll<HTMLElement>("[data-magnetic]"))
+    }
+    refreshMagnetic()
+    const observer = new MutationObserver(refreshMagnetic)
+    observer.observe(document.body, { childList: true, subtree: true })
 
     const runMagnetic = (e: MouseEvent) => {
       if (magneticAnimFrame.current) cancelAnimationFrame(magneticAnimFrame.current)
 
       magneticAnimFrame.current = requestAnimationFrame(() => {
-        magneticEls().forEach((el) => {
+        magneticEls.current.forEach((el) => {
           const rect = el.getBoundingClientRect()
           const cx = rect.left + rect.width / 2
           const cy = rect.top + rect.height / 2
@@ -105,7 +111,7 @@ export function CustomCursor() {
     }
 
     const resetMagnetic = () => {
-      magneticEls().forEach((el) => {
+      magneticEls.current.forEach((el) => {
         el.style.transform = ""
         el.style.transition = "transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94)"
       })
@@ -125,6 +131,7 @@ export function CustomCursor() {
       window.removeEventListener("mouseenter", onEnter)
       document.removeEventListener("mouseover", onMouseOver)
       document.removeEventListener("mouseout", onMouseOut)
+      observer.disconnect()
       resetMagnetic()
       if (magneticAnimFrame.current) cancelAnimationFrame(magneticAnimFrame.current)
     }

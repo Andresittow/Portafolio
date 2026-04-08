@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef, useMemo } from "react"
 import { Menu, X, Sparkles, Sun, Moon, Globe } from "lucide-react"
 import { useTheme } from "next-themes"
 import { useTranslations } from "next-intl"
@@ -29,25 +29,35 @@ export function Navbar() {
   // Avoid hydration mismatch
   useEffect(() => setMounted(true), [])
 
+  // Throttle ref to avoid excessive layout work on scroll
+  const throttleTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
+      if (throttleTimer.current) return
+      throttleTimer.current = setTimeout(() => {
+        throttleTimer.current = null
+        setScrolled(window.scrollY > 50)
 
-      const sections = navLinks.map(link => link.href.replace("#", ""))
-      for (const section of sections.reverse()) {
-        const element = document.getElementById(section)
-        if (element) {
-          const rect = element.getBoundingClientRect()
-          if (rect.top <= 150) {
-            setActiveSection(section)
-            break
+        const sections = navLinks.map(link => link.href.replace("#", ""))
+        for (const section of sections.reverse()) {
+          const element = document.getElementById(section)
+          if (element) {
+            const rect = element.getBoundingClientRect()
+            if (rect.top <= 150) {
+              setActiveSection(section)
+              break
+            }
           }
         }
-      }
+      }, 100) // throttle to 100ms (~10 checks/s instead of 60+)
     }
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+      if (throttleTimer.current) clearTimeout(throttleTimer.current)
+    }
   }, [navLinks])
 
   const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark")
