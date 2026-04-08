@@ -44,7 +44,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <a href="#inicio" className="inline-flex items-center gap-4 mb-6 group">
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg shadow-primary/30 group-hover:scale-105 transition-transform">
-                <span className="text-white font-bold text-xl">AC</span>
+                <img src="/icon.jpg" alt="Icon" className="w-full h-full rounded-2xl" />
               </div>
               <div>
                 <span className="font-bold text-xl text-foreground block">Andrés Chacua</span>
