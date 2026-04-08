@@ -12,6 +12,7 @@ import { Contact } from "@/components/portfolio/contact"
 import { Footer } from "@/components/portfolio/footer"
 import { InitialLoader } from "@/components/portfolio/initial-loader"
 import { CustomCursor } from "@/components/portfolio/custom-cursor"
+import { ParticlesBackground } from "@/components/portfolio/particles-background"
 
 export default function Home() {
   const [loaderDone, setLoaderDone] = useState(false)
@@ -24,7 +25,8 @@ export default function Home() {
     <>
       <CustomCursor />
       {!loaderDone && <InitialLoader onComplete={handleLoaderComplete} />}
-      <main className="min-h-screen bg-background">
+      <ParticlesBackground />
+      <main className="relative z-10 min-h-screen">
         <Navbar />
         <Hero />
         <About />

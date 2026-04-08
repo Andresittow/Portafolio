@@ -4,11 +4,11 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
+  --background: #F8F8F8;
   --foreground: #1e293b;
-  --card: #ffffff;
+  --card: #FAFAFA;
   --card-foreground: #1e293b;
-  --popover: #ffffff;
+  --popover: #FAFAFA;
   --popover-foreground: #1e293b;
   --primary: #2563eb;
   --primary-foreground: #ffffff;
@@ -29,7 +29,7 @@
   --chart-4: #3b82f6;
   --chart-5: #6366f1;
   --radius: 1rem;
-  --sidebar: #ffffff;
+  --sidebar: #F8F8F8;
   --sidebar-foreground: #1e293b;
   --sidebar-primary: #2563eb;
   --sidebar-primary-foreground: #ffffff;
@@ -148,5 +148,11 @@
   }
   .card-hover {
     @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  /* tsParticles canvas must never block page interactions */
+  #tsparticles,
+  #tsparticles canvas {
+    pointer-events: none !important;
   }
 }
