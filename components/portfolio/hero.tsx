@@ -1,9 +1,10 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ArrowDown, Download, Github, Linkedin, Mail, Sparkles } from "lucide-react"
+import { Download, Github, Linkedin, Mail, Sparkles } from "lucide-react"
 import { motion } from "framer-motion"
 import { useTranslations } from "next-intl"
+import Image from "next/image"
 import { RevealText } from "@/components/ui/reveal-text"
 import { StaggerContainer } from "@/components/ui/stagger-container"
 import { StaggerItem } from "@/components/ui/stagger-item"
@@ -183,7 +184,14 @@ export function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-[3rem] rotate-6 opacity-20" />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-[3rem] -rotate-6 opacity-10" />
                 <div className="relative h-full bg-white dark:bg-card rounded-[3rem] shadow-2xl shadow-primary/20 flex items-center justify-center overflow-hidden border border-border/50">
-                  <img src="/foto.jpeg" alt="Foto de perfil" className="w-full h-full object-cover" width={500} height={500} />
+                  <Image
+                    src="/foto.jpeg"
+                    alt="Foto de perfil de Andrés Chacua"
+                    fill
+                    priority
+                    sizes="(max-width: 640px) 240px, (max-width: 1024px) 320px, 384px"
+                    className="object-cover"
+                  />
                 </div>
               </div>
 
