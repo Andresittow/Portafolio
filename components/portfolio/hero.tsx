@@ -183,7 +183,7 @@ export function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-[3rem] rotate-6 opacity-20" />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-[3rem] -rotate-6 opacity-10" />
                 <div className="relative h-full bg-white dark:bg-card rounded-[3rem] shadow-2xl shadow-primary/20 flex items-center justify-center overflow-hidden border border-border/50">
-                  <img src="/foto.jpeg" alt="Foto de perfil" className="w-full h-full object-cover" />
+                  <img src="/foto.jpeg" alt="Foto de perfil" className="w-full h-full object-cover" width={500} height={500} />
                 </div>
               </div>
 

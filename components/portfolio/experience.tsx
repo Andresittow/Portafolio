@@ -59,7 +59,7 @@ export function Experience() {
           </RevealText>
           <RevealText
             as="h2"
-            className="text-3xl sm:text-4xl font-bold text-foreground mb-4"
+            className="text-3xl sm:text-4xl font-bold text-foreground mb-4 p-2"
             delay={0.1}
           >
             {t("heading")}
