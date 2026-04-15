@@ -32,11 +32,35 @@ export function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormState({ name: "", email: "", subject: "", message: "" })
-    setTimeout(() => setIsSubmitted(false), 5000)
+    
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/andreschacua24@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          nombre: formState.name,
+          correo: formState.email,
+          asunto: formState.subject,
+          mensaje: formState.message,
+          _subject: `Nuevo mensaje de portafolio: ${formState.subject}`
+        })
+      })
+
+      if (response.ok) {
+        setIsSubmitted(true)
+        setFormState({ name: "", email: "", subject: "", message: "" })
+        setTimeout(() => setIsSubmitted(false), 5000)
+      } else {
+        console.error("Error al enviar el mensaje")
+      }
+    } catch (error) {
+      console.error("Error:", error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
