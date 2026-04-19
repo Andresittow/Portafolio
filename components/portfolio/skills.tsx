@@ -184,27 +184,37 @@ export function Skills() {
                 onMouseEnter={() => setHoveredSkill(skill.name)}
                 onMouseLeave={() => setHoveredSkill(null)}
                 className={cn(
-                  "group relative p-7 rounded-3xl bg-white dark:bg-card border transition-all duration-500 h-full",
+                  "group relative p-5 sm:p-7 rounded-3xl bg-white dark:bg-card border transition-all duration-500 h-full",
                   hoveredSkill === skill.name
-                    ? "border-primary/30 shadow-2xl shadow-primary/10 -translate-y-2"
-                    : "border-border/50 shadow-lg shadow-gray-200/50 dark:shadow-slate-900/50 hover:shadow-xl"
+                    ? "border-primary/30 shadow-md sm:shadow-2xl shadow-primary/5 sm:shadow-primary/10 -translate-y-1 sm:-translate-y-2"
+                    : "border-border/50 shadow-sm sm:shadow-lg shadow-gray-200/30 sm:shadow-gray-200/50 dark:shadow-none sm:dark:shadow-slate-900/50 hover:shadow-md sm:hover:shadow-xl"
                 )}
               >
-                {/* Category Badge */}
-                <div className="absolute top-5 right-5">
-                  <span className={cn("px-3 py-1.5 rounded-lg text-xs font-bold", skill.bgColor, skill.textColor)}>
-                    {skill.category === "frontend" ? t("categories.frontend") : t("categories.backend")}
-                  </span>
-                </div>
-
-                {/* Icon & Name */}
-                <div className="flex items-start gap-5 mb-5">
-                  <div className={cn("p-4 rounded-2xl transition-all duration-300", skill.bgColor, "group-hover:scale-110")}>
-                    {skill.icon}
+                {/* Icon & Content Container */}
+                <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-5 mb-5 sm:mb-6">
+                  {/* Top Header on Mobile (Icon + Badge) / Just Icon on Desktop */}
+                  <div className="flex items-center justify-between w-full sm:w-auto shrink-0">
+                    <div className={cn("p-3 sm:p-4 rounded-2xl transition-all duration-300", skill.bgColor, "group-hover:scale-110")}>
+                      {skill.icon}
+                    </div>
+                    {/* Badge mobile only - sits opposite to the icon */}
+                    <div className="sm:hidden">
+                      <span className={cn("px-2.5 py-1 rounded-lg text-[10px] font-bold tracking-wider uppercase", skill.bgColor, skill.textColor)}>
+                        {skill.category === "frontend" ? t("categories.frontend") : t("categories.backend")}
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex-1 pt-1">
-                    <h3 className="font-bold text-xl text-foreground mb-1">{skill.name}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{skill.description}</p>
+                  
+                  {/* Title & Description */}
+                  <div className="flex-1 pt-1 min-w-0">
+                    <div className="flex items-center justify-between gap-2 mb-2">
+                      <h3 className="font-bold text-lg sm:text-xl text-foreground truncate">{skill.name}</h3>
+                      {/* Badge desktop only */}
+                      <span className={cn("hidden sm:inline-block px-3 py-1 rounded-lg text-xs font-bold tracking-wider uppercase shrink-0", skill.bgColor, skill.textColor)}>
+                        {skill.category === "frontend" ? t("categories.frontend") : t("categories.backend")}
+                      </span>
+                    </div>
+                    <p className="text-[13px] sm:text-sm text-muted-foreground leading-relaxed">{skill.description}</p>
                   </div>
                 </div>
 
