@@ -97,7 +97,7 @@ export function Experience() {
         <div className="max-w-3xl mx-auto">
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2" />
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-border -translate-x-1/2" />
 
             {/* Timeline Items */}
             <StaggerContainer key={activeTab} className="relative">
@@ -112,13 +112,13 @@ export function Experience() {
                     {/* Timeline Dot */}
                     <div
                       className={cn(
-                        "absolute left-0 md:left-1/2 w-4 h-4 rounded-full border-4 border-background md:-translate-x-1/2 z-10",
+                        "hidden md:block absolute left-1/2 w-4 h-4 rounded-full border-4 border-background -translate-x-1/2 z-10",
                         item.current ? "bg-primary animate-pulse" : "bg-muted-foreground/50"
                       )}
                     />
 
                     {/* Content */}
-                    <div className={cn("ml-8 md:ml-0 md:w-1/2 p-4", index % 2 === 0 ? "md:pr-12" : "md:pl-12")}>
+                    <div className={cn("w-full md:w-1/2 p-4", index % 2 === 0 ? "md:pr-12" : "md:pl-12")}>
                       <div className={cn(
                         "p-6 rounded-2xl border transition-all duration-300 hover:-translate-y-1",
                         item.current ? "bg-primary/5 border-primary/30" : "bg-card border-border hover:border-primary/20"
