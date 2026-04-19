@@ -68,7 +68,7 @@ export function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="space-y-6 sm:space-y-8">
+          <div className="space-y-6 sm:space-y-8 flex flex-col items-center lg:items-start text-center lg:text-left">
             {/* Badge */}
             <motion.div
               initial="hidden"
@@ -119,7 +119,7 @@ export function Hero() {
             </RevealText>
 
             {/* Buttons */}
-            <StaggerContainer className="flex flex-wrap gap-3 sm:gap-4" delay={0.2}>
+            <StaggerContainer className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4" delay={0.2}>
               <StaggerItem>
                 <a
                   href="#contact"
@@ -142,7 +142,7 @@ export function Hero() {
             </StaggerContainer>
 
             {/* Social Links */}
-            <StaggerContainer className="flex items-center gap-5 pt-4" delay={0.3}>
+            <StaggerContainer className="flex items-center justify-center lg:justify-start gap-5 pt-4" delay={0.3}>
               <StaggerItem>
                 <span className="text-sm text-muted-foreground font-medium">{t("followLabel")}</span>
               </StaggerItem>
