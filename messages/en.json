@@ -78,9 +78,12 @@
     "descriptions": {
       "Java": "Robust and scalable application development",
       "Python": "Scripting, automation and data analysis",
-      "HTML5": "Semantic and accessible web structure",
-      "CSS3": "Modern styles and responsive design",
-      "Tailwind CSS": "Utility-first framework for modern interfaces"
+      "Tailwind CSS": "Utility-first framework for modern interfaces",
+      "Nextjs": "React framework for modern web applications",
+      "Spring Boot": "Scalable backend development with Java ecosystem",
+      "MySQL": "Robust relational database management",
+      "MongoDB": "Scalable NoSQL database management",
+      "Manejo de IA en proyectos": "Integration and usage of AI tools"
     }
   },
   "Projects": {

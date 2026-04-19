@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { cn } from "@/lib/utils"
-import { Zap } from "lucide-react"
+import { Zap, Database, Leaf, Brain, Layers } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { RevealText } from "@/components/ui/reveal-text"
 import { StaggerContainer } from "@/components/ui/stagger-container"
@@ -11,7 +11,6 @@ import { StaggerItem } from "@/components/ui/stagger-item"
 const skillsData = [
   {
     name: "Java",
-    level: 80,
     category: "backend",
     color: "from-orange-500 to-red-500",
     bgColor: "bg-orange-500/10",
@@ -28,7 +27,6 @@ const skillsData = [
   },
   {
     name: "Python",
-    level: 70,
     category: "backend",
     color: "from-yellow-400 to-blue-500",
     bgColor: "bg-blue-500/10",
@@ -43,42 +41,47 @@ const skillsData = [
     ),
   },
   {
-    name: "HTML5",
-    level: 75,
+    name: "Next.js",
     category: "frontend",
-    color: "from-orange-500 to-orange-600",
-    bgColor: "bg-orange-500/10",
-    textColor: "text-orange-600",
-    icon: (
-      <svg viewBox="0 0 128 128" className="w-10 h-10">
-        <path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"/>
-        <path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"/>
-        <path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zM64 88.198l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"/>
-        <path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zM63.952 24.599v13.762h32.432l.269-3.045.63-6.943.329-3.774z"/>
-      </svg>
-    ),
+    color: "from-gray-700 to-black dark:from-gray-300 dark:to-white",
+    bgColor: "bg-gray-500/10",
+    textColor: "text-foreground",
+    icon: <Layers className="w-10 h-10" />
   },
   {
-    name: "CSS3",
-    level: 70,
-    category: "frontend",
-    color: "from-blue-500 to-blue-600",
+    name: "Spring Boot",
+    category: "backend",
+    color: "from-green-500 to-green-700",
+    bgColor: "bg-green-500/10",
+    textColor: "text-green-600",
+    icon: <Leaf className="w-10 h-10" />
+  },
+  {
+    name: "MySQL",
+    category: "backend",
+    color: "from-blue-500 to-blue-700",
     bgColor: "bg-blue-500/10",
     textColor: "text-blue-600",
-    icon: (
-      <svg viewBox="0 0 128 128" className="w-10 h-10">
-        <path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543z"/>
-        <path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16z"/>
-        <path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95z"/>
-        <path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018z"/>
-        <path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881z"/>
-        <path fill="#EBEBEB" d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711zM64.001 51.431v13.831H48.702l-.277-3.108-.631-7.012-.33-3.711z"/>
-      </svg>
-    ),
+    icon: <Database className="w-10 h-10" />
+  },
+  {
+    name: "MongoDB",
+    category: "backend",
+    color: "from-green-600 to-green-800",
+    bgColor: "bg-green-600/10",
+    textColor: "text-green-700",
+    icon: <Database className="w-10 h-10" />
+  },
+  {
+    name: "Manejo de IA en proyectos",
+    category: "backend",
+    color: "from-purple-500 to-purple-700",
+    bgColor: "bg-purple-500/10",
+    textColor: "text-purple-600",
+    icon: <Brain className="w-10 h-10" />
   },
   {
     name: "Tailwind CSS",
-    level: 60,
     category: "frontend",
     color: "from-cyan-400 to-cyan-600",
     bgColor: "bg-cyan-500/10",
@@ -104,7 +107,7 @@ export function Skills() {
 
   const skills = skillsData.map(s => ({
     ...s,
-    description: t(`descriptions.${s.name}`),
+    description: t(`descriptions.${s.name.replace(/\./g, '')}`),
   }))
 
   const filteredSkills =
@@ -199,12 +202,11 @@ export function Skills() {
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-muted-foreground font-medium">{t("mastery")}</span>
-                    <span className="text-sm font-bold text-foreground">{skill.level}%</span>
                   </div>
                   <div className="h-3 bg-secondary rounded-full overflow-hidden">
                     <div
                       className={cn("h-full rounded-full transition-all duration-700 ease-out bg-gradient-to-r", skill.color)}
-                      style={{ width: hoveredSkill === skill.name ? `${skill.level}%` : "0%" }}
+                      style={{ width: hoveredSkill === skill.name ? `100%` : "0%" }}
                     />
                   </div>
                 </div>
