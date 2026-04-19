@@ -131,8 +131,8 @@ export function Hero() {
               </StaggerItem>
               <StaggerItem>
                 <a
-                  href="/cv-Andrés-chacua.pdf"
-                  download
+                  href="/CV_Andres_Chacua.pdf"
+                  download="CV_Andres_Chacua.pdf"
                   className="inline-flex items-center gap-2 sm:gap-3 px-5 py-3 sm:px-7 sm:py-4 bg-white dark:bg-card text-foreground rounded-2xl font-bold border-2 border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 hover:scale-105 text-sm sm:text-base"
                 >
                   <Download size={20} />
