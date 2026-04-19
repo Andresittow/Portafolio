@@ -21,12 +21,13 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "DevConnect Hub",
-    tags: ["Python", "HTML", "CSS"],
-    github: "https://github.com/Andréschacua/devconnect",
-    demo: "https://devconnect-demo.vercel.app",
+    title: "Calculadora Ango",
+    tags: ["React", "TypeScript", "Math"],
+    github: "https://github.com/Gabonarvaezm/geogebra-ango.git",
+    demo: "https://geogebra-ango.vercel.app/",
     color: "from-violet-500 to-purple-400",
     shadowColor: "shadow-violet-500/20",
+    image: "/CalculadoraAngo.png"
   },
   {
     id: 3,
