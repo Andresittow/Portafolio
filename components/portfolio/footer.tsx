@@ -7,7 +7,7 @@ import { StaggerItem } from "@/components/ui/stagger-item"
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/Andresittow", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/aAndrésitohh", label: "LinkedIn" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/edison-chacua1313/", label: "LinkedIn" },
   { icon: X, href: "https://twitter.com/aandresitohh", label: "Twitter" },
   { icon: Mail, href: "mailto:andreschacua24@gmail.com", label: "Email" },
 ]

@@ -179,32 +179,32 @@
     "sub": "Opinions from professors, classmates and mentors who have worked with me",
     "items": [
       {
-        "name": "Maria Garcia",
-        "role": "Programming Professor",
-        "company": "Universidad Cooperativa de Colombia",
-        "content": "Andrés is an exceptional student with an impressive ability to solve problems. His dedication and passion for programming are evident in every project he delivers.",
-        "avatar": "MG"
+        "name": "Sebastián Parra",
+        "role": "Frontend Developer",
+        "company": "TechNova Solutions",
+        "content": "Working with Andrés has been fantastic. His attention to detail and ability to create fluid interfaces raised the quality of our last project.",
+        "avatar": "SP"
       },
       {
-        "name": "Carlos Rodriguez",
-        "role": "Project Teammate",
-        "company": "Universidad Cooperativa de Colombia",
-        "content": "Working with Andrés was an incredible experience. His ability to communicate technical ideas and his willingness to help the team made our project a success.",
-        "avatar": "CR"
+        "name": "Alejandra Bernal",
+        "role": "UX/UI Designer",
+        "company": "Creative Studio",
+        "content": "Andrés is a developer who perfectly understands design. He managed to implement my prototypes with incredible precision, also contributing excellent ideas.",
+        "avatar": "AB"
       },
       {
-        "name": "Laura Martinez",
-        "role": "Tech Mentor",
-        "company": "Comunidad Dev Colombia",
-        "content": "I've watched Andrés grow as a developer and I can say he has a brilliant future. His curiosity and eagerness to learn are admirable.",
-        "avatar": "LM"
+        "name": "Natalia Escobar",
+        "role": "Project Manager",
+        "company": "InnovateTech",
+        "content": "As a project manager, I highly value Andrés's commitment. He always meets deadlines and his proactive approach helped us avoid many issues.",
+        "avatar": "NE"
       },
       {
-        "name": "Juan Pablo Hernandez",
-        "role": "Project Lead",
-        "company": "Hackathon UCC 2024",
-        "content": "During the hackathon, Andrés demonstrated technical leadership and creativity. His ability to work under pressure and deliver quality results is impressive.",
-        "avatar": "JH"
+        "name": "Michel Briceño",
+        "role": "Backend Engineer",
+        "company": "DevMasters",
+        "content": "Excellent team player. His client-side code integrates perfectly with our APIs, and he is always willing to collaborate.",
+        "avatar": "MB"
       }
     ]
   },
