@@ -31,7 +31,7 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "PlayerMusic",
+    title: "VibesMusic",
     tags: ["TypeScript", "Python", "Tailwind"],
     github: "https://github.com/Andresittow/PlayerMusic.git",
     demo: "https://player-music-liart-one.vercel.app/",
@@ -41,12 +41,13 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "TaskFlow AI",
-    tags: ["Java", "Python", "HTML"],
-    github: "https://github.com/Andréschacua/taskflow",
-    demo: "https://taskflow-demo.vercel.app",
+    title: "PlanetaryClock",
+    tags: ["TypeScript", "Python", "Tailwind"],
+    github: "https://github.com/Andresittow/planetary_clock.git",
+    demo: "https://planetary-clock-eight.vercel.app/",
     color: "from-orange-500 to-amber-400",
     shadowColor: "shadow-orange-500/20",
+    image: "/planetary_clocks.png"
   },
 ]
 
@@ -114,29 +115,23 @@ export function Projects() {
                   {/* Base Gradient Layer */}
                   <div className={cn(
                     "absolute inset-0 transition-opacity duration-700 bg-gradient-to-br",
-                    (project as any).image ? "mix-blend-overlay opacity-60 dark:opacity-40 group-hover:opacity-40" : "mix-blend-overlay opacity-80 group-hover:opacity-100",
+                    (project as any).image ? "mix-blend-overlay opacity-30 dark:opacity-20 group-hover:opacity-10" : "mix-blend-overlay opacity-80 group-hover:opacity-100",
                     project.color
                   )} />
                   {/* Overlay for text readability if image exists */}
                   {(project as any).image && (
-                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-700" />
+                    <div className="absolute inset-0 bg-black/10 dark:bg-black/40 group-hover:bg-transparent transition-colors duration-700" />
                   )}
                   
                   {/* Animated Blurs for Premium Feel */}
-                  <div className={cn("absolute top-0 right-0 w-72 h-72 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-1000 ease-out", (project as any).image ? "bg-white/10" : "bg-white/20 dark:bg-white/10")} />
-                  <div className={cn("absolute bottom-0 left-0 w-48 h-48 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2 group-hover:scale-150 transition-transform duration-1000 ease-out delay-100", (project as any).image ? "bg-black/40" : "bg-black/10 dark:bg-black/20")} />
+                  <div className={cn("absolute top-0 right-0 w-72 h-72 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-1000 ease-out", (project as any).image ? "bg-white/5" : "bg-white/20 dark:bg-white/10")} />
+                  <div className={cn("absolute bottom-0 left-0 w-48 h-48 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2 group-hover:scale-150 transition-transform duration-1000 ease-out delay-100", (project as any).image ? "bg-black/20 text-transparent" : "bg-black/10 dark:bg-black/20")} />
 
-                  {/* Floating ID & Sparkles */}
+                  {/* Floating ID */}
                   <div className="relative flex justify-between items-start z-10 w-full">
-                    <span className="text-7xl font-black text-white/30 tracking-tighter select-none group-hover:scale-110 transition-transform duration-500 origin-top-left">
+                    <span className="text-7xl font-black text-white/50 dark:text-white/30 drop-shadow-md tracking-tighter select-none group-hover:scale-110 transition-transform duration-500 origin-top-left">
                       0{project.id}
                     </span>
-                    <div className={cn(
-                      "w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/20 shadow-xl transition-all duration-700",
-                      hoveredId === project.id ? "rotate-12 scale-110 bg-white/30" : ""
-                    )}>
-                      <Sparkles className="text-white" size={26} />
-                    </div>
                   </div>
 
                   {/* Tags Overlapping Content */}
