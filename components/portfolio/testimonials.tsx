@@ -108,7 +108,7 @@ export function Testimonials() {
         <div className="max-w-4xl mx-auto mt-16 md:mt-0">
           <div className="relative">
             {/* Quote Icon */}
-            <div className="absolute -top-16 md:-top-16 left-1/2 md:left-8 -translate-x-1/2 md:translate-x-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center z-10 shadow-lg">
+            <div className="absolute -top-16 md:-top-16 left-1/2 md:left-8 -translate-x-1/2 md:translate-x-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center z-10 shadow-sm">
               <Quote className="text-primary" size={24} />
             </div>
 

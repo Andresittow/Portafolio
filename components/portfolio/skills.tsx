@@ -186,8 +186,8 @@ export function Skills() {
                 className={cn(
                   "group relative p-5 sm:p-7 rounded-3xl bg-white dark:bg-card border transition-all duration-500 h-full",
                   hoveredSkill === skill.name
-                    ? "border-primary/30 shadow-md sm:shadow-2xl shadow-primary/5 sm:shadow-primary/10 -translate-y-1 sm:-translate-y-2"
-                    : "border-border/50 shadow-sm sm:shadow-lg shadow-gray-200/30 sm:shadow-gray-200/50 dark:shadow-none sm:dark:shadow-slate-900/50 hover:shadow-md sm:hover:shadow-xl"
+                    ? "border-primary/30 shadow-sm shadow-primary/5 -translate-y-1"
+                    : "border-border/50 hover:shadow-sm"
                 )}
               >
                 {/* Icon & Content Container */}

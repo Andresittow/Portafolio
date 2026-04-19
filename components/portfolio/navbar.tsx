@@ -96,7 +96,7 @@ export function Navbar() {
       <div className={cn(
         "relative rounded-2xl transition-all duration-500",
         scrolled
-          ? "bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl shadow-lg shadow-primary/5 border border-border/50"
+          ? "bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl shadow-sm shadow-primary/5 border border-border/50"
           : "bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl border border-white/50 dark:border-slate-700/50"
       )}>
         <div className="px-4 sm:px-6 py-3">
@@ -104,7 +104,7 @@ export function Navbar() {
             {/* Logo */}
             <a href="#inicio" className="group flex items-center gap-3">
               <div className="relative">
-                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg shadow-primary/30 group-hover:shadow-primary/50 transition-all duration-300 group-hover:scale-105">
+                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-sm shadow-primary/10 group-hover:shadow-sm group-hover:shadow-primary/30 transition-all duration-300 group-hover:scale-105">
                   <img src="/icon.jpg" alt="Logo" width={44} height={44} className="rounded-xl" />
                 </div>
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-white dark:border-slate-900 animate-pulse" />
@@ -183,7 +183,7 @@ export function Navbar() {
               <div className="hidden lg:block">
                 <a
                   href="#contact"
-                  className="group relative inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-semibold text-sm overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:scale-105"
+                  className="group relative inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-semibold text-sm overflow-hidden transition-all duration-300 hover:shadow-sm hover:shadow-primary/20 hover:scale-105"
                 >
                   <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                   <Sparkles size={16} className="relative z-10" />

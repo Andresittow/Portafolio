@@ -59,11 +59,11 @@ export function About() {
           <div className="relative h-full flex items-center">
             <div className="relative w-full max-w-2xl mx-auto lg:mx-0">
               {/* Background shapes */}
-              <div className="absolute -inset-6 bg-gradient-to-br from-primary/20 to-accent/20 rounded-[2.5rem] rotate-3 blur-md" />
-              <div className="absolute -inset-6 bg-gradient-to-br from-accent/20 to-primary/20 rounded-[2.5rem] -rotate-3 blur-md" />
+              <div className="absolute inset-0 sm:-inset-6 bg-gradient-to-br from-primary/10 sm:from-primary/20 to-accent/10 sm:to-accent/20 rounded-[2.5rem] rotate-1 sm:rotate-3 blur-sm sm:blur-md opacity-50 sm:opacity-100 transition-all" />
+              <div className="absolute inset-0 sm:-inset-6 bg-gradient-to-br from-accent/10 sm:from-accent/20 to-primary/10 sm:to-primary/20 rounded-[2.5rem] -rotate-1 sm:-rotate-3 blur-sm sm:blur-md opacity-50 sm:opacity-100 transition-all" />
               
               {/* Main card */}
-              <div className="relative bg-white dark:bg-card rounded-[2.5rem] p-8 sm:p-12 shadow-2xl shadow-primary/10 border border-border/50 w-full">
+              <div className="relative bg-white dark:bg-card rounded-[2.5rem] p-8 sm:p-12 shadow-sm shadow-primary/5 border border-border/50 w-full">
                 {/* Stats Grid */}
                 <StaggerContainer className="grid grid-cols-2 gap-4 mb-6">
                   {stats.map((stat, index) => (
@@ -109,7 +109,7 @@ export function About() {
                 const Icon = highlightIcons[index]
                 return (
                   <StaggerItem key={index}>
-                    <div className="group p-5 rounded-2xl bg-white dark:bg-card border border-border/50 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1 h-full">
+                    <div className="group p-5 rounded-2xl bg-white dark:bg-card border border-border/50 hover:border-primary/30 hover:shadow-sm hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1 h-full">
                       <div className="flex items-start gap-4">
                         <div className="p-3 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 text-primary group-hover:from-primary group-hover:to-accent group-hover:text-white transition-all duration-300">
                           <Icon size={22} />

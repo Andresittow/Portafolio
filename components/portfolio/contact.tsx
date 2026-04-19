@@ -105,7 +105,7 @@ export function Contact() {
               {contactInfo.map((info) => (
                 <StaggerItem key={info.label}>
                   <div className="group flex items-center gap-5 p-5 rounded-2xl bg-gradient-to-r from-secondary/50 to-transparent hover:from-primary/10 hover:to-transparent transition-all duration-300">
-                    <div className="w-14 h-14 rounded-2xl bg-white dark:bg-card shadow-lg shadow-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:shadow-primary/20 transition-all duration-300 shrink-0">
+                    <div className="w-14 h-14 rounded-2xl bg-white dark:bg-card shadow-sm shadow-primary/5 flex items-center justify-center group-hover:scale-110 group-hover:shadow-sm transition-all duration-300 shrink-0 border border-border/50">
                       <info.icon className="text-primary" size={24} />
                     </div>
                     <div className="min-w-0">
@@ -135,7 +135,7 @@ export function Contact() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-14 h-14 rounded-2xl bg-white dark:bg-card shadow-md flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg ${social.color}`}
+                      className={`w-14 h-14 rounded-2xl bg-white dark:bg-card border border-border/50 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-sm ${social.color}`}
                       aria-label={social.label}
                     >
                       <social.icon size={22} />
@@ -164,7 +164,7 @@ export function Contact() {
           <div className="lg:col-span-7">
             {isSubmitted ? (
               <div className="flex flex-col items-center justify-center py-20 text-center">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center mb-6 shadow-lg shadow-green-500/30">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center mb-6 shadow-sm shadow-green-500/10">
                   <CheckCircle className="text-white" size={40} />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-3">{t("successTitle")}</h3>

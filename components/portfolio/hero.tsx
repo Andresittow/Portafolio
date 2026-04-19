@@ -177,13 +177,13 @@ export function Hero() {
           >
             <div className="relative">
               {/* Decorative elements */}
-              <div className="absolute -inset-8 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-2xl animate-pulse" />
+              <div className="absolute -inset-4 sm:-inset-8 bg-gradient-to-r from-primary/10 sm:from-primary/20 to-accent/10 sm:to-accent/20 rounded-full blur-xl sm:blur-2xl animate-pulse transition-all" />
 
               {/* Main avatar container */}
               <div className="relative w-60 h-60 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-[3rem] rotate-6 opacity-20" />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-[3rem] -rotate-6 opacity-10" />
-                <div className="relative h-full bg-white dark:bg-card rounded-[3rem] shadow-2xl shadow-primary/20 flex items-center justify-center overflow-hidden border border-border/50">
+                <div className="relative h-full bg-white dark:bg-card rounded-[3rem] shadow-sm shadow-primary/5 flex items-center justify-center overflow-hidden border border-border/50">
                   <Image
                     src="/foto.jpeg"
                     alt="Foto de perfil de Andrés Chacua"
@@ -196,13 +196,13 @@ export function Hero() {
               </div>
 
               {/* Floating badges */}
-              <div className="absolute -top-2 right-2 sm:-top-4 sm:-right-4 px-3 py-1.5 sm:px-5 sm:py-2.5 bg-white dark:bg-card rounded-2xl shadow-xl shadow-primary/10 border border-border/50 animate-bounce">
+              <div className="absolute -top-2 right-2 sm:-top-4 sm:-right-4 px-3 py-1.5 sm:px-5 sm:py-2.5 bg-white dark:bg-card rounded-2xl shadow-sm shadow-primary/5 border border-border/50 animate-bounce">
                 <span className="text-xs sm:text-sm font-bold text-foreground">Java</span>
               </div>
-              <div className="absolute -bottom-2 left-2 sm:-bottom-4 sm:-left-4 px-3 py-1.5 sm:px-5 sm:py-2.5 bg-white dark:bg-card rounded-2xl shadow-xl shadow-primary/10 border border-border/50 animate-bounce" style={{ animationDelay: "150ms" }}>
+              <div className="absolute -bottom-2 left-2 sm:-bottom-4 sm:-left-4 px-3 py-1.5 sm:px-5 sm:py-2.5 bg-white dark:bg-card rounded-2xl shadow-sm shadow-primary/5 border border-border/50 animate-bounce" style={{ animationDelay: "150ms" }}>
                 <span className="text-xs sm:text-sm font-bold text-foreground">Python</span>
               </div>
-              <div className="absolute top-1/2 -translate-y-1/2 right-1 sm:-right-8 px-3 py-1.5 sm:px-5 sm:py-2.5 bg-gradient-to-r from-primary to-accent text-white rounded-2xl shadow-xl shadow-primary/30 animate-bounce" style={{ animationDelay: "300ms" }}>
+              <div className="absolute top-1/2 -translate-y-1/2 right-1 sm:-right-8 px-3 py-1.5 sm:px-5 sm:py-2.5 bg-gradient-to-r from-primary to-accent text-white rounded-2xl shadow-sm shadow-primary/10 animate-bounce" style={{ animationDelay: "300ms" }}>
                 <span className="text-xs sm:text-sm font-bold">Tailwind</span>
               </div>
             </div>

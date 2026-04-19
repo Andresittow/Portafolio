@@ -100,7 +100,7 @@ export function Projects() {
               <div
                 onMouseEnter={() => setHoveredId(project.id)}
                 onMouseLeave={() => setHoveredId(null)}
-                className="group relative flex flex-col h-full bg-white dark:bg-card border border-border/50 rounded-[2.5rem] overflow-hidden hover:border-primary/50 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20"
+                className="group relative flex flex-col h-full bg-white dark:bg-card border border-border/50 rounded-[2.5rem] overflow-hidden hover:border-primary/30 transition-all duration-700 hover:-translate-y-1 hover:shadow-sm hover:shadow-primary/5"
               >
                 {/* Top Section - Decorative Mesh/Gradient Background */}
                 <div className="relative h-64 w-full overflow-hidden bg-secondary dark:bg-muted/50 p-8 flex flex-col justify-between">
