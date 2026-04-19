@@ -181,7 +181,7 @@ export function Contact() {
                     <input
                       type="text" id="name" name="name"
                       value={formState.name} onChange={handleChange} required
-                      className="w-full px-5 py-4 rounded-xl bg-secondary/50 border-2 border-transparent focus:border-primary focus:bg-white dark:bg-card outline-none transition-all duration-300 text-foreground placeholder:text-muted-foreground font-medium"
+                      className="w-full px-5 py-4 rounded-xl bg-white dark:bg-card border-2 border-border/70 dark:border-border hover:border-primary/50 focus:border-primary outline-none transition-all duration-300 text-foreground placeholder:text-muted-foreground font-medium"
                       placeholder={t("namePlaceholder")}
                     />
                   </div>
@@ -193,7 +193,7 @@ export function Contact() {
                     <input
                       type="email" id="email" name="email"
                       value={formState.email} onChange={handleChange} required
-                      className="w-full px-5 py-4 rounded-xl bg-secondary/50 border-2 border-transparent focus:border-primary focus:bg-white dark:bg-card outline-none transition-all duration-300 text-foreground placeholder:text-muted-foreground font-medium"
+                      className="w-full px-5 py-4 rounded-xl bg-white dark:bg-card border-2 border-border/70 dark:border-border hover:border-primary/50 focus:border-primary outline-none transition-all duration-300 text-foreground placeholder:text-muted-foreground font-medium"
                       placeholder="tu@email.com"
                     />
                   </div>
@@ -207,7 +207,7 @@ export function Contact() {
                   <input
                     type="text" id="subject" name="subject"
                     value={formState.subject} onChange={handleChange} required
-                    className="w-full px-5 py-4 rounded-xl bg-secondary/50 border-2 border-transparent focus:border-primary focus:bg-white dark:bg-card outline-none transition-all duration-300 text-foreground placeholder:text-muted-foreground font-medium"
+                    className="w-full px-5 py-4 rounded-xl bg-white dark:bg-card border-2 border-border/70 dark:border-border hover:border-primary/50 focus:border-primary outline-none transition-all duration-300 text-foreground placeholder:text-muted-foreground font-medium"
                     placeholder={t("subjectPlaceholder")}
                   />
                 </div>
@@ -220,7 +220,7 @@ export function Contact() {
                   <textarea
                     id="message" name="message"
                     value={formState.message} onChange={handleChange} required rows={6}
-                    className="w-full px-5 py-4 rounded-xl bg-secondary/50 border-2 border-transparent focus:border-primary focus:bg-white dark:bg-card outline-none transition-all duration-300 text-foreground placeholder:text-muted-foreground resize-none font-medium"
+                    className="w-full px-5 py-4 rounded-xl bg-white dark:bg-card border-2 border-border/70 dark:border-border hover:border-primary/50 focus:border-primary outline-none transition-all duration-300 text-foreground placeholder:text-muted-foreground resize-none font-medium"
                     placeholder={t("messagePlaceholder")}
                   />
                 </div>

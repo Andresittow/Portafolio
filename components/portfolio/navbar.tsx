@@ -104,8 +104,8 @@ export function Navbar() {
             {/* Logo */}
             <a href="#inicio" className="group flex items-center gap-3">
               <div className="relative">
-                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-sm shadow-primary/10 group-hover:shadow-sm group-hover:shadow-primary/30 transition-all duration-300 group-hover:scale-105">
-                  <img src="/icon.jpg" alt="Logo" width={44} height={44} className="rounded-xl" />
+                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-sm shadow-primary/10 group-hover:shadow-sm group-hover:shadow-primary/30 transition-all duration-300 group-hover:scale-105">
+                  <img src="/icon-rounded.png" alt="Logo" width={44} height={44} className="rounded-full" />
                 </div>
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-white dark:border-slate-900 animate-pulse" />
               </div>

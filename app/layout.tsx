@@ -23,16 +23,16 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/icon.jpg',
+        url: '/icon-rounded.png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon.jpg',
+        url: '/icon-rounded.png',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.jpg',
-        type: 'image/jpg',
+        url: '/icon-rounded.png',
+        type: 'image/png',
       },
     ],
   },
