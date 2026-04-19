@@ -190,7 +190,7 @@ export function Projects() {
         {/* View More CTA */}
         <div className="text-center mt-16">
           <a
-            href="https://github.com/Andrésittow"
+            href="https://github.com/Andresittow"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background rounded-2xl font-semibold hover:bg-foreground/90 transition-all duration-300 hover:scale-105 hover:shadow-xl"

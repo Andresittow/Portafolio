@@ -26,6 +26,8 @@ export function About() {
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-20">
           <RevealText
@@ -54,14 +56,14 @@ export function About() {
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - Visual Element */}
-          <div className="relative">
-            <div className="relative max-w-md mx-auto">
+          <div className="relative h-full flex items-center">
+            <div className="relative w-full max-w-2xl mx-auto lg:mx-0">
               {/* Background shapes */}
-              <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-[2rem] rotate-3 blur-sm" />
-              <div className="absolute -inset-4 bg-gradient-to-br from-accent/20 to-primary/20 rounded-[2rem] -rotate-3 blur-sm" />
+              <div className="absolute -inset-6 bg-gradient-to-br from-primary/20 to-accent/20 rounded-[2.5rem] rotate-3 blur-md" />
+              <div className="absolute -inset-6 bg-gradient-to-br from-accent/20 to-primary/20 rounded-[2.5rem] -rotate-3 blur-md" />
               
               {/* Main card */}
-              <div className="relative bg-white dark:bg-card rounded-[2rem] p-8 shadow-2xl shadow-primary/10 border border-border/50">
+              <div className="relative bg-white dark:bg-card rounded-[2.5rem] p-8 sm:p-12 shadow-2xl shadow-primary/10 border border-border/50 w-full">
                 {/* Stats Grid */}
                 <StaggerContainer className="grid grid-cols-2 gap-4 mb-6">
                   {stats.map((stat, index) => (
