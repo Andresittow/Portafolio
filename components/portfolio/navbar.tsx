@@ -60,12 +60,34 @@ export function Navbar() {
     }
   }, [navLinks])
 
+  // Close mobile menu on click outside
+  const navRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside)
+      document.addEventListener("touchstart", handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+      document.removeEventListener("touchstart", handleClickOutside)
+    }
+  }, [isOpen])
+
   const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark")
   const toggleLocale = () => setLocale(locale === "es" ? "en" : "es")
   const isDark = mounted && theme === "dark"
 
   return (
     <nav
+      ref={navRef}
       className={cn(
         "fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500",
         scrolled ? "w-[96%] max-w-5xl" : "w-[90%] max-w-5xl"
