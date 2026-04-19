@@ -22,7 +22,7 @@ const projectsData = [
   {
     id: 2,
     title: "Calculadora Ango",
-    tags: ["React", "TypeScript", "Math"],
+    tags: ["TypeScript", "Tailwind"],
     github: "https://github.com/Gabonarvaezm/geogebra-ango.git",
     demo: "https://geogebra-ango.vercel.app/",
     color: "from-violet-500 to-purple-400",
@@ -31,12 +31,13 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "EcoMarket Place",
-    tags: ["HTML", "CSS", "Tailwind"],
-    github: "https://github.com/Andréschacua/ecomarket",
-    demo: "https://ecomarket-demo.vercel.app",
+    title: "PlayerMusic",
+    tags: ["TypeScript", "Python", "Tailwind"],
+    github: "https://github.com/Andresittow/PlayerMusic.git",
+    demo: "https://player-music-liart-one.vercel.app/",
     color: "from-emerald-500 to-teal-400",
     shadowColor: "shadow-emerald-500/20",
+    image: "/PlayerMusic.png"
   },
   {
     id: 4,
