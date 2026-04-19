@@ -101,22 +101,28 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-border/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-muted-foreground flex items-center gap-2">
-              © {currentYear} Andrés Chacua. {t("copyright")}{" "}
-              <Heart size={14} className="text-red-500 fill-red-500 animate-pulse" /> {t("copyrightPost")}
-            </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="flex flex-col items-center md:items-start gap-3">
+              <p className="text-sm text-foreground font-bold tracking-wide">
+                © {currentYear} Andrés Chacua.
+              </p>
+              <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground bg-secondary/50 px-4 py-2 rounded-full border border-border/50">
+                <span>{t("copyright")}</span>
+                <Heart size={14} className="text-red-500 fill-red-500 animate-bounce" />
+                <span>{t("copyrightPost")}</span>
+              </div>
+            </div>
 
             {/* Back to Top */}
             <button
               onClick={scrollToTop}
-              className="group flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors font-medium"
+              className="group flex items-center gap-4 text-sm text-muted-foreground hover:text-primary transition-all duration-300 bg-white/50 dark:bg-card/50 backdrop-blur-sm pl-5 pr-2 py-2 rounded-2xl border border-border hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10"
             >
-              {t("backToTop")}
-              <span className="w-10 h-10 rounded-xl bg-white dark:bg-card border border-border group-hover:border-primary/30 group-hover:bg-primary group-hover:text-white flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
-                <ArrowUp size={18} />
-              </span>
+              <span className="font-bold uppercase tracking-widest text-[10px] sm:text-xs">{t("backToTop")}</span>
+              <div className="w-10 h-10 rounded-xl bg-primary text-white flex items-center justify-center transition-all duration-300 group-hover:scale-110 shadow-lg shadow-primary/30">
+                <ArrowUp size={20} />
+              </div>
             </button>
           </div>
         </div>

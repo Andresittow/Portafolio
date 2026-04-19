@@ -88,7 +88,7 @@ export function About() {
 
           {/* Right - Content */}
           <div className="space-y-8">
-            <div className="space-y-6">
+            <div className="space-y-6 text-justify">
               <RevealText as="p" className="text-xl text-muted-foreground leading-relaxed" delay={0}>
                 {t("p1Pre")} <span className="text-foreground font-bold">{t("p1Name")}</span>
                 {t("p1Mid")}{" "}
