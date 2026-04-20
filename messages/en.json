@@ -179,34 +179,34 @@
   "Testimonials": {
     "badge": "Testimonials",
     "heading": "What People Say About Me",
-    "sub": "Opinions from professors, classmates and mentors who have worked with me",
+    "sub": "What the people closest to me say about my personality and work ethic",
     "items": [
       {
         "name": "Sebastián Parra",
-        "role": "Frontend Developer",
-        "company": "TechNova Solutions",
-        "content": "Working with Andrés has been fantastic. His attention to detail and ability to create fluid interfaces raised the quality of our last project.",
+        "role": "Classmate & Friend",
+        "company": "University",
+        "content": "Andrés is a super dedicated and creative person. His projects always look flawless and built with high quality; you can definitely tell he masters his craft.",
         "avatar": "SP"
       },
       {
         "name": "Alejandra Bernal",
-        "role": "UX/UI Designer",
-        "company": "Creative Studio",
-        "content": "Andrés is a developer who perfectly understands design. He managed to implement my prototypes with incredible precision, also contributing excellent ideas.",
+        "role": "Friend",
+        "company": "Close Circle",
+        "content": "I really admire Andrés's perseverance. Whenever he wants to learn something new, he never rests until he achieves it. He always has a proactive and positive mindset.",
         "avatar": "AB"
       },
       {
         "name": "Natalia Escobar",
-        "role": "Project Manager",
-        "company": "InnovateTech",
-        "content": "As a project manager, I highly value Andrés's commitment. He always meets deadlines and his proactive approach helped us avoid many issues.",
+        "role": "Family",
+        "company": "Family",
+        "content": "Since he was little, he has proven to be someone very focused and disciplined. His ability to solve problems and his attention to detail stand out in every aspect of his life.",
         "avatar": "NE"
       },
       {
         "name": "Michel Briceño",
-        "role": "Backend Engineer",
-        "company": "DevMasters",
-        "content": "Excellent team player. His client-side code integrates perfectly with our APIs, and he is always willing to collaborate.",
+        "role": "Friend",
+        "company": "Close Circle",
+        "content": "Having Andrés around is synonymous with motivation. The websites he has developed look super professional; you can tell at a glance that he is passionate and really knows his stuff.",
         "avatar": "MB"
       }
     ]

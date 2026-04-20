@@ -179,34 +179,34 @@
   "Testimonials": {
     "badge": "Testimonios",
     "heading": "Lo Que Dicen De Mí",
-    "sub": "Opiniones de profesores, compañeros y mentores que han trabajado conmigo",
+    "sub": "Lo que dicen las personas más cercanas a mí acerca de mi personalidad y disciplina",
     "items": [
       {
         "name": "Sebastián Parra",
-        "role": "Desarrollador Frontend",
-        "company": "TechNova Solutions",
-        "content": "Trabajar con Andrés ha sido fantástico. Su atención al detalle y capacidad para crear interfaces fluidas elevó la calidad de nuestro último proyecto.",
+        "role": "Amigo y Compañero",
+        "company": "Universidad",
+        "content": "Andrés es una persona súper dedicada y creativa. Sus proyectos siempre lucen impecables y construidos con mucha calidad; definitivamente se nota que domina lo que hace.",
         "avatar": "SP"
       },
       {
         "name": "Alejandra Bernal",
-        "role": "Diseñadora UX/UI",
-        "company": "Creative Studio",
-        "content": "Andrés es un desarrollador que entiende perfectamente el diseño. Logró implementar mis prototipos con una precisión increíble, aportando además excelentes ideas.",
+        "role": "Amiga",
+        "company": "Círculo Cercano",
+        "content": "Admiro mucho la perseverancia de Andrés. Cuando se propone aprender algo nuevo, no descansa hasta lograrlo. Siempre tiene una mentalidad proactiva y muy positiva.",
         "avatar": "AB"
       },
       {
         "name": "Natalia Escobar",
-        "role": "Líder de Proyecto",
-        "company": "InnovateTech",
-        "content": "Como líder de proyecto, valoro enormemente el compromiso de Andrés. Siempre cumple con los plazos y su enfoque proactivo nos ayudó a evitar muchos problemas.",
+        "role": "Familiar",
+        "company": "Familia",
+        "content": "Desde pequeño ha demostrado ser alguien muy enfocado y disciplinado. Su capacidad para resolver problemas y su atención a los detalles destacan en cada faceta de su vida.",
         "avatar": "NE"
       },
       {
         "name": "Michel Briceño",
-        "role": "Ingeniero Backend",
-        "company": "DevMasters",
-        "content": "Excelente compañero de equipo. Su código del lado del cliente se integra a la perfección con nuestras APIs, y siempre está dispuesto a colaborar.",
+        "role": "Amigo",
+        "company": "Círculo Cercano",
+        "content": "Tener a Andrés cerca es sinónimo de motivación. Las páginas que ha desarrollado se ven súper profesionales; se nota a simple vista que le apasiona y sabe muy bien lo que hace.",
         "avatar": "MB"
       }
     ]

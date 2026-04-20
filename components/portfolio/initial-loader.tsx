@@ -84,53 +84,29 @@ export function InitialLoader({ onComplete }: InitialLoaderProps) {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 1.03 }}
           transition={{ duration: EXIT_DURATION, ease: [0.76, 0, 0.24, 1] }}
-          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center"
-          style={{ background: "#060b18", willChange: "opacity, transform" }}
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-sky-50 dark:bg-[#060b18]"
+          style={{ willChange: "opacity, transform" }}
           aria-live="polite"
           aria-label="Cargando portafolio"
         >
-          {/* Glow de fondo — solo en desktop (no en móvil para ahorrar GPU) */}
-          <div
-            className="absolute inset-0 pointer-events-none hidden sm:block"
-            style={{
-              background:
-                "radial-gradient(ellipse 70% 55% at 50% 50%, rgba(37,99,235,0.18) 0%, rgba(14,165,233,0.06) 55%, transparent 100%)",
-            }}
-          />
-
           {/* Barra de progreso */}
           <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-            <div className="w-36 h-[2px] bg-white/15 rounded-full overflow-hidden">
+            <div className="w-36 h-[2px] bg-sky-200 dark:bg-white/15 rounded-full overflow-hidden">
               <div
-                className="h-full bg-white/75 rounded-full"
+                className="h-full bg-primary dark:bg-white/75 rounded-full"
                 style={{
                   width: `${progress}%`,
                   transition: "width 0.18s ease-out",
                 }}
               />
             </div>
-            <span className="text-white/35 text-[10px] font-mono tracking-widest uppercase">
+            <span className="text-primary/60 dark:text-white/35 text-[10px] font-mono tracking-widest uppercase">
               {greetings[index].lang}
             </span>
           </div>
 
           {/* Palabra del saludo */}
           <div className="relative flex items-center justify-center">
-            {/* Glow detrás del texto — solo desktop, sin blur costoso */}
-            <div
-              className="absolute pointer-events-none hidden sm:block"
-              style={{
-                width: "clamp(260px, 55vw, 620px)",
-                height: "clamp(120px, 20vw, 280px)",
-                background: isLast
-                  ? "radial-gradient(ellipse at 50% 50%, rgba(147,197,255,0.35) 0%, transparent 70%)"
-                  : "radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.12) 0%, transparent 70%)",
-                // blur suave pero menos costoso en desktop
-                filter: "blur(28px)",
-                transition: "background 0.25s ease",
-              }}
-            />
-
             <AnimatePresence mode="wait">
               <motion.span
                 key={index}
@@ -138,7 +114,7 @@ export function InitialLoader({ onComplete }: InitialLoaderProps) {
                 animate={{ y: 0,  opacity: 1 }}
                 exit={{ y: -28,   opacity: 0 }}
                 transition={{ duration: 0.1, ease: [0.76, 0, 0.24, 1] }}
-                className="relative block text-white font-extrabold text-center leading-none select-none"
+                className="relative block text-primary dark:text-white font-extrabold text-center leading-none select-none drop-shadow-[0_10px_35px_rgba(37,99,235,0.4)]"
                 style={{
                   fontSize: "clamp(3.5rem, 13vw, 9rem)",
                   fontFamily: "var(--font-plus-jakarta), system-ui, sans-serif",

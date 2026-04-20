@@ -96,8 +96,8 @@ export function Navbar() {
       <div className={cn(
         "relative rounded-2xl transition-all duration-500",
         scrolled
-          ? "bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl shadow-sm shadow-primary/5 border border-border/50"
-          : "bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl border border-white/50 dark:border-slate-700/50"
+          ? "bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm shadow-primary/5 border border-border/50"
+          : "bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm border border-white/50 dark:border-slate-700/50"
       )}>
         <div className="px-4 sm:px-6 py-3">
           <div className="flex items-center justify-between">

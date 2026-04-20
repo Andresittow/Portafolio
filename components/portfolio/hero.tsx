@@ -57,9 +57,9 @@ export function Hero() {
     >
       {/* Background Elements — hidden on mobile for perf */}
       <div className="absolute inset-0 overflow-hidden hidden sm:block" aria-hidden="true">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-primary/5 to-accent/5 rounded-full blur-3xl" />
+        <div className="hidden md:block absolute top-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+        <div className="hidden md:block absolute bottom-20 right-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-primary/5 to-accent/5 rounded-full blur-3xl" />
       </div>
 
       {/* Subtle grid — hidden on mobile for perf */}
@@ -177,7 +177,7 @@ export function Hero() {
           >
             <div className="relative">
               {/* Decorative elements */}
-              <div className="absolute -inset-4 sm:-inset-8 bg-gradient-to-r from-primary/10 sm:from-primary/20 to-accent/10 sm:to-accent/20 rounded-full blur-xl sm:blur-2xl animate-pulse transition-all" />
+              <div className="absolute -inset-4 sm:-inset-8 bg-gradient-to-r from-primary/10 sm:from-primary/20 to-accent/10 sm:to-accent/20 rounded-full blur-xl sm:blur-2xl sm:animate-pulse transition-all" />
 
               {/* Main avatar container */}
               <div className="relative w-60 h-60 sm:w-80 sm:h-80 lg:w-96 lg:h-96">

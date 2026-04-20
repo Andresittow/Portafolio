@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { ExternalLink, Github, ArrowUpRight, Layers, Sparkles } from "lucide-react"
 import { cn } from "@/lib/utils"
+import Image from "next/image"
 import { useTranslations } from "next-intl"
 import { RevealText } from "@/components/ui/reveal-text"
 import { StaggerContainer } from "@/components/ui/stagger-container"
@@ -63,8 +64,8 @@ export function Projects() {
   return (
     <section id="projects" className="py-16 sm:py-28 relative overflow-hidden">
       {/* Background decorations */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      <div className="hidden md:block absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
+      <div className="hidden md:block absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -106,10 +107,13 @@ export function Projects() {
                 <div className="relative h-64 w-full overflow-hidden bg-secondary dark:bg-muted/50 p-8 flex flex-col justify-between">
                   {/* Project Image Background */}
                   {(project as any).image && (
-                    <img 
+                    <Image 
                       src={(project as any).image} 
                       alt={project.title}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      quality={70}
+                      className="object-cover transition-transform duration-1000 group-hover:scale-110"
                     />
                   )}
                   {/* Base Gradient Layer */}
@@ -124,8 +128,8 @@ export function Projects() {
                   )}
                   
                   {/* Animated Blurs for Premium Feel */}
-                  <div className={cn("absolute top-0 right-0 w-72 h-72 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-1000 ease-out", (project as any).image ? "bg-white/5" : "bg-white/20 dark:bg-white/10")} />
-                  <div className={cn("absolute bottom-0 left-0 w-48 h-48 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2 group-hover:scale-150 transition-transform duration-1000 ease-out delay-100", (project as any).image ? "bg-black/20 text-transparent" : "bg-black/10 dark:bg-black/20")} />
+                  <div className={cn("hidden md:block absolute top-0 right-0 w-72 h-72 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-1000 ease-out", (project as any).image ? "bg-white/5" : "bg-white/20 dark:bg-white/10")} />
+                  <div className={cn("hidden md:block absolute bottom-0 left-0 w-48 h-48 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2 group-hover:scale-150 transition-transform duration-1000 ease-out delay-100", (project as any).image ? "bg-black/20 text-transparent" : "bg-black/10 dark:bg-black/20")} />
 
                   {/* Floating ID */}
                   <div className="relative flex justify-between items-start z-10 w-full">
