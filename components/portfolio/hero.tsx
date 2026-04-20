@@ -185,7 +185,7 @@ export function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-[3rem] -rotate-6 opacity-10" />
                 <div className="relative h-full bg-white dark:bg-card rounded-[3rem] shadow-sm shadow-primary/5 flex items-center justify-center overflow-hidden border border-border/50">
                   <Image
-                    src="/foto.jpeg"
+                    src="/fotoport.png"
                     alt="Foto de perfil de Andrés Chacua"
                     fill
                     priority
