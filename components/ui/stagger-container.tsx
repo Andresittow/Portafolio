@@ -20,7 +20,7 @@ export function StaggerContainer({
   style,
 }: StaggerContainerProps) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: false, amount })
+  const isInView = useInView(ref, { once: true, amount })
 
   const variants = {
     hidden: staggerContainerVariants.hidden,

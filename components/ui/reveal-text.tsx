@@ -19,7 +19,7 @@ export function RevealText({
   ...props
 }: RevealTextProps) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: false, amount })
+  const isInView = useInView(ref, { once: true, amount })
 
   const variants = {
     hidden: textRevealVariants.hidden,
