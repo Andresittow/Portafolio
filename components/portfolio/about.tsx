@@ -59,8 +59,8 @@ export function About() {
           <div className="relative h-full flex items-center">
             <div className="relative w-full max-w-2xl mx-auto lg:mx-0">
               {/* Background shapes */}
-              <div className="absolute inset-0 sm:-inset-6 bg-gradient-to-br from-primary/10 sm:from-primary/20 to-accent/10 sm:to-accent/20 rounded-[2.5rem] rotate-1 sm:rotate-3 blur-sm sm:blur-md opacity-50 sm:opacity-100 transition-all" />
-              <div className="absolute inset-0 sm:-inset-6 bg-gradient-to-br from-accent/10 sm:from-accent/20 to-primary/10 sm:to-primary/20 rounded-[2.5rem] -rotate-1 sm:-rotate-3 blur-sm sm:blur-md opacity-50 sm:opacity-100 transition-all" />
+              <div className="absolute inset-0 sm:-inset-6 bg-gradient-to-br from-primary/10 sm:from-primary/20 to-accent/10 sm:to-accent/20 rounded-[2.5rem] rotate-1 sm:rotate-2 blur-sm sm:blur-lg opacity-30 sm:opacity-30 transition-all" />
+              <div className="absolute inset-0 sm:-inset-6 bg-gradient-to-br from-accent/10 sm:from-accent/20 to-primary/10 sm:to-primary/20 rounded-[2.5rem] -rotate-1 sm:-rotate-2 blur-sm sm:blur-lg opacity-30 sm:opacity-30 transition-all" />
               
               {/* Main card */}
               <div className="relative bg-white dark:bg-card rounded-[2.5rem] p-8 sm:p-12 shadow-sm shadow-primary/5 border border-border/50 w-full">

@@ -125,7 +125,7 @@ export function Navbar() {
                 <div className="w-11 h-11 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-sm shadow-primary/10 group-hover:shadow-sm group-hover:shadow-primary/30 transition-all duration-300 group-hover:scale-105">
                   <img src="/icon-rounded.png" alt="Logo" width={44} height={44} className="rounded-full" />
                 </div>
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-white dark:border-slate-900 animate-pulse" />
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-400 rounded-full border-2 border-white dark:border-slate-900 animate-pulse" />
               </div>
               <div className="hidden sm:block">
                 <span className="block font-bold text-foreground text-sm tracking-tight">Andrés Chacua</span>
@@ -245,6 +245,21 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
+            {/* Contacto (Solo en Móvil) */}
+            <a
+              href="#contact"
+              onClick={() => setIsOpen(false)}
+              className={cn(
+                "flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300",
+                activeSection === "contact"
+                  ? "bg-gradient-to-r from-primary to-accent text-white shadow-md"
+                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
+              )}
+              style={{ animationDelay: `${navLinks.length * 50}ms` }}
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-current opacity-50" />
+              {t("contact")}
+            </a>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@
 import { useState } from "react"
 import {
   Mail, Phone, MapPin, Send, Github, Linkedin,
-  CheckCircle, MessageCircle, Sparkles, X,
+  CheckCircle, MessageCircle, Sparkles,
 } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { RevealText } from "@/components/ui/reveal-text"
@@ -13,7 +13,6 @@ import { StaggerItem } from "@/components/ui/stagger-item"
 const socialLinks = [
   { icon: Github, label: "GitHub", href: "https://github.com/Andresittow", color: "hover:bg-gray-900 hover:text-white" },
   { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/edison-chacua1313/", color: "hover:bg-blue-600 hover:text-white" },
-  { icon: X, label: "X", href: "https://x.com/aandresitohh", color: "hover:bg-sky-500 hover:text-white" },
 ]
 
 export function Contact() {
@@ -145,19 +144,6 @@ export function Contact() {
               </StaggerContainer>
             </div>
 
-            {/* Availability Badge */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-800/30">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                </span>
-                <span className="font-bold text-green-700 dark:text-green-400">{t("availabilityTitle")}</span>
-              </div>
-              <p className="text-sm text-green-600/80 dark:text-green-500/80 leading-relaxed">
-                {t("availabilityDesc")}
-              </p>
-            </div>
           </div>
 
           {/* Right Side - Form */}

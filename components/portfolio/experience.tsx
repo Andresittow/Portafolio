@@ -169,16 +169,6 @@ export function Experience() {
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-16">
-          <p className="text-muted-foreground mb-4">{t("ctaText")}</p>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-xl font-semibold hover:bg-primary/90 transition-colors"
-          >
-            {t("ctaButton")}
-          </a>
-        </div>
       </div>
     </section>
   )

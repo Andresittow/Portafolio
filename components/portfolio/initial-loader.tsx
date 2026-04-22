@@ -89,22 +89,6 @@ export function InitialLoader({ onComplete }: InitialLoaderProps) {
           aria-live="polite"
           aria-label="Cargando portafolio"
         >
-          {/* Barra de progreso */}
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-            <div className="w-36 h-[2px] bg-sky-200 dark:bg-white/15 rounded-full overflow-hidden">
-              <div
-                className="h-full bg-primary dark:bg-white/75 rounded-full"
-                style={{
-                  width: `${progress}%`,
-                  transition: "width 0.18s ease-out",
-                }}
-              />
-            </div>
-            <span className="text-primary/60 dark:text-white/35 text-[10px] font-mono tracking-widest uppercase">
-              {greetings[index].lang}
-            </span>
-          </div>
-
           {/* Palabra del saludo */}
           <div className="relative flex items-center justify-center">
             <AnimatePresence mode="wait">

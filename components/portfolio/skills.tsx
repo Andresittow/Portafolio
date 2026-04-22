@@ -10,6 +10,16 @@ import { StaggerItem } from "@/components/ui/stagger-item"
 
 const skillsData = [
   {
+    name: "Manejo de IA en proyectos",
+    category: "backend",
+    color: "from-purple-500 to-purple-700",
+    bgColor: "bg-purple-500/10",
+    textColor: "text-purple-600",
+    icon: (
+      <img src="/IA.png" alt="IA" className="w-10 h-10 object-contain" />
+    )
+  },
+  {
     name: "Java",
     category: "backend",
     color: "from-orange-500 to-red-500",
@@ -78,16 +88,6 @@ const skillsData = [
     textColor: "text-green-700",
     icon: (
       <img src="/mongodb.png" alt="MongoDB" className="w-10 h-10 object-contain" />
-    )
-  },
-  {
-    name: "Manejo de IA en proyectos",
-    category: "backend",
-    color: "from-purple-500 to-purple-700",
-    bgColor: "bg-purple-500/10",
-    textColor: "text-purple-600",
-    icon: (
-      <img src="/IA.png" alt="IA" className="w-10 h-10 object-contain" />
     )
   },
   {

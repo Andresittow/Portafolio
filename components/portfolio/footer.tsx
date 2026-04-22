@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowUp, Github, Linkedin, Twitter, Mail, Heart, X } from "lucide-react"
+import { ArrowUp, Github, Linkedin, Mail, Heart } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { StaggerContainer } from "@/components/ui/stagger-container"
 import { StaggerItem } from "@/components/ui/stagger-item"
@@ -8,7 +8,7 @@ import { StaggerItem } from "@/components/ui/stagger-item"
 const socialLinks = [
   { icon: Github, href: "https://github.com/Andresittow", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/edison-chacua1313/", label: "LinkedIn" },
-  { icon: X, href: "https://twitter.com/aandresitohh", label: "Twitter" },
+
   { icon: Mail, href: "mailto:andreschacua24@gmail.com", label: "Email" },
 ]
 
