@@ -68,7 +68,7 @@ export function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="space-y-6 sm:space-y-8 flex flex-col items-center lg:items-start text-center lg:text-left">
+          <div className="order-2 lg:order-1 space-y-6 sm:space-y-8 flex flex-col items-center lg:items-start text-center lg:text-left">
             {/* Badge */}
             <motion.div
               initial="hidden"
@@ -131,8 +131,8 @@ export function Hero() {
               </StaggerItem>
               <StaggerItem>
                 <a
-                  href="/CV_Andres_Chacua.pdf"
-                  download="CV_Andres_Chacua.pdf"
+                  href="/Edison_Chacua_CV.pdf"
+                  download="Edison_Chacua_CV.pdf"
                   className="inline-flex items-center gap-2 sm:gap-3 px-5 py-3 sm:px-7 sm:py-4 bg-white dark:bg-card text-foreground rounded-2xl font-bold border-2 border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 hover:scale-105 text-sm sm:text-base"
                 >
                   <Download size={20} />
@@ -173,7 +173,7 @@ export function Hero() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="relative flex justify-center lg:justify-end mt-6 lg:mt-0"
+            className="order-1 lg:order-2 relative flex justify-center lg:justify-end mt-6 lg:mt-0"
           >
             <div className="relative">
               {/* Decorative elements */}

@@ -114,20 +114,8 @@ export function Testimonials() {
 
             {/* Card */}
             <div className="glass rounded-3xl p-8 md:p-12">
-              {/* Rating */}
-              <div className="flex gap-1 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={20} className="fill-primary text-primary" />
-                ))}
-              </div>
-
-              {/* Content */}
-              <p className="text-lg md:text-xl text-foreground leading-relaxed mb-8 italic">
-                &quot;{testimonials[activeIndex].content}&quot;
-              </p>
-
               {/* Author */}
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 mb-6">
                 <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-cyan-500 flex items-center justify-center text-primary-foreground font-bold text-lg">
                   {testimonials[activeIndex].avatar}
                 </div>
@@ -137,37 +125,21 @@ export function Testimonials() {
                   <p className="text-xs text-primary">{testimonials[activeIndex].company}</p>
                 </div>
               </div>
+
+              {/* Rating */}
+              <div className="flex gap-1 mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={20} className="fill-primary text-primary" />
+                ))}
+              </div>
+
+              {/* Content */}
+              <p className="text-lg md:text-xl text-foreground leading-relaxed italic">
+                &quot;{testimonials[activeIndex].content}&quot;
+              </p>
             </div>
           </div>
         </div>
-
-        {/* Mini Testimonials */}
-        <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-16">
-          {testimonials.map((testimonial, index) => (
-            <StaggerItem key={index}>
-              <button
-                onClick={() => { setIsAutoPlaying(false); setActiveIndex(index) }}
-                className={cn(
-                  "p-4 rounded-xl text-left transition-all w-full h-full",
-                  index === activeIndex
-                    ? "bg-primary/10 border border-primary/30"
-                    : "bg-card border border-border hover:border-primary/20"
-                )}
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary/50 to-cyan-500/50 flex items-center justify-center text-xs font-bold shrink-0">
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-foreground">{testimonial.name}</p>
-                    <p className="text-xs text-muted-foreground">{testimonial.role}</p>
-                  </div>
-                </div>
-                <p className="text-xs text-muted-foreground line-clamp-2">{testimonial.content}</p>
-              </button>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
       </div>
     </section>
   )

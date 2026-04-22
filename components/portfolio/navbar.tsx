@@ -17,14 +17,14 @@ export function Navbar() {
   const { locale, setLocale } = useLocale()
   const t = useTranslations("Navbar")
 
-  const navLinks = [
+  const navLinks = useMemo(() => [
     { href: "#inicio", label: t("inicio") },
     { href: "#about", label: t("about") },
     { href: "#skills", label: t("skills") },
     { href: "#projects", label: t("projects") },
     { href: "#experience", label: t("experience") },
     { href: "#testimonials", label: t("testimonials") },
-  ]
+  ], [t])
 
   // Avoid hydration mismatch
   useEffect(() => setMounted(true), [])
@@ -44,7 +44,8 @@ export function Navbar() {
           const element = document.getElementById(section)
           if (element) {
             const rect = element.getBoundingClientRect()
-            if (rect.top <= 150) {
+            // Increase slightly to 300 to match more generously, avoiding skipping sections.
+            if (rect.top <= 300) {
               setActiveSection(section)
               break
             }
@@ -62,6 +63,23 @@ export function Navbar() {
 
   // Close mobile menu on click outside
   const navRef = useRef<HTMLElement>(null)
+
+  // Close mobile menu on scroll
+  useEffect(() => {
+    const handleScrollClose = () => {
+      if (isOpen) {
+        setIsOpen(false)
+      }
+    }
+    
+    if (isOpen) {
+      window.addEventListener("scroll", handleScrollClose, { passive: true })
+    }
+    
+    return () => {
+      window.removeEventListener("scroll", handleScrollClose)
+    }
+  }, [isOpen])
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent | TouchEvent) => {
